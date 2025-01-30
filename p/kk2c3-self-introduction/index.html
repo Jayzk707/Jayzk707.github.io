@@ -75,7 +75,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">KK2C3</a></h1>
-            <h2 class="site-description">欢迎来到kk2C3的博客</h2>
+            <h2 class="site-description">欢迎来到kk2C3的博客,这个博客我会一直维护下去免费提供给大陆用户使用，我会不定期分享一些免费的黑科技，我也会制作一些黑科技分享给大家使用</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -88,13 +88,7 @@
                     >
                         
                         
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-
-
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="nonzero"><path d="M24 0v24H0V0h24ZM12.594 23.258l-.012.002-.071.035-.02.004-.014-.004-.071-.036c-.01-.003-.019 0-.024.006l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113-.014.002-.184.093-.01.01-.003.011.018.43.005.012.008.008.201.092c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.003-.011.018-.43-.003-.012-.01-.01-.184-.092Z"/><path fill="#09244B" d="M16.5 11a5.5 5.5 0 0 1 4.821 8.148l.386 1.311a1.005 1.005 0 0 1-1.248 1.248l-1.31-.386A5.5 5.5 0 1 1 16.5 11ZM11 3a9.004 9.004 0 0 1 8.708 6.719 7.5 7.5 0 0 0-9.22 11.267 8.953 8.953 0 0 1-4.097-1.255l-2.65.78a1.008 1.008 0 0 1-1.252-1.252l.78-2.65A9 9 0 0 1 11 3Z"/></g></svg>
                         
                     </a>
                 </li>
@@ -713,15 +707,7 @@
 
 <div id="particles-js"></div>
 
-<style>
-    body {
-      background: url(https://Jayzk707.github.io/background/2c3.jpg) no-repeat center top;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-  </style>
-  
-
+<script src=https://Jayzk707.github.io/background/sakura.js></script>
 
 <script src=https://Jayzk707.github.io/background/particles.min.js></script>
 <script>
@@ -740,7 +726,91 @@
   }
 </style>
 
+<style>
+    body {
+      background: url(https://Jayzk707.github.io/background/2c3.jpg) no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+</style>
 
 
+<style>
+    @font-face {
+      font-family: '2 ';
+      src: url(https://Jayzk707.github.io/font/fusion-pixel-12px-proportional-zh_hans.otf) format('truetype');
+    }
+  
+    :root {
+      --base-font-family: '小新';
+      --code-font-family: '小新新';
+    }
+  </style>
+  
+
+  <script>
+    const cdnPath = 'https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main';
+    const config = {
+      
+      path: {
+        modelPath: cdnPath + "/Resources/",
+        cssPath: cdnPath + "/waifu.css",
+        tipsJsonPath: cdnPath + "/waifu-tips.json",
+        tipsJsPath: cdnPath + "/waifu-tips.js",
+        live2dCorePath: cdnPath + "/Core/live2dcubismcore.js",
+        live2dSdkPath: cdnPath + "/live2d-sdk.js"
+      },
+      
+      tools: ["hitokoto", "asteroids", "express", "switch-model", "switch-texture", "info", "quit"],
+      
+      drag: {
+        enable: true,
+        direction: ["x", "y"]
+      },
+      
+      switchType: "order"
+    }
+  
+    
+    if (screen.width >= 768) {
+      Promise.all([
+        loadExternalResource(config.path.cssPath, "css"),
+        loadExternalResource(config.path.live2dCorePath, "js"),
+        loadExternalResource(config.path.live2dSdkPath, "js"),
+        loadExternalResource(config.path.tipsJsPath, "js")
+      ]).then(() => {
+        initWidget({
+          waifuPath: config.path.tipsJsonPath,
+          cdnPath: config.path.modelPath,
+          tools: config.tools,
+          dragEnable: config.drag.enable,
+          dragDirection: config.drag.direction,
+          switchType: config.switchType
+        });
+      });
+    }
+  
+    
+    function loadExternalResource(url, type) {
+      return new Promise((resolve, reject) => {
+        let tag;
+        if (type === "css") {
+          tag = document.createElement("link");
+          tag.rel = "stylesheet";
+          tag.href = url;
+        }
+        else if (type === "js") {
+          tag = document.createElement("script");
+          tag.src = url;
+        }
+        if (tag) {
+          tag.onload = () => resolve(url);
+          tag.onerror = () => reject(url);
+          document.head.appendChild(tag);
+        }
+      });
+    }
+  </script>
+  
     </body>
 </html>

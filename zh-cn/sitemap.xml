@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://Jayzk707.github.io/</loc>
-    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://Jayzk707.github.io/categories/</loc>
-    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,14 +38,8 @@
                 href="https://Jayzk707.github.io/categories/"
                 />
   </url><url>
-    <loc>https://Jayzk707.github.io/tags/github/</loc>
-    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
-  </url><url>
-    <loc>https://Jayzk707.github.io/tags/gitlab/</loc>
-    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
-  </url><url>
     <loc>https://Jayzk707.github.io/post/</loc>
-    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -56,6 +50,21 @@
                 hreflang="zh-cn"
                 href="https://Jayzk707.github.io/post/"
                 />
+  </url><url>
+    <loc>https://Jayzk707.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/p/self-learning/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/tags/github/</loc>
+    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/tags/gitlab/</loc>
+    <lastmod>2025-01-30T02:33:30+08:00</lastmod>
   </url><url>
     <loc>https://Jayzk707.github.io/tags/</loc>
     <lastmod>2025-01-30T02:33:30+08:00</lastmod>
