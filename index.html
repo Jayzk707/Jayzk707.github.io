@@ -7,7 +7,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="KK2C3">
+<link rel="stylesheet" href="/scss/style.min.dd230681ddfee22694f192ba16e66c48f1cedca586f47fd91b001a8e7fdb8efb.css"><meta property='og:title' content="KK2C3">
 <meta property='og:description' content="欢迎来到kk2C3的博客">
 <meta property='og:url' content='https://Jayzk707.github.io/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -709,17 +709,32 @@
             
     </nav>
 
-<footer class="site-footer">
-    <section class="copyright">
-        &copy; 
+
+<script src="/js/topbar.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         
-        2025 KK2C3
-    </section>
-    
-    <section class="powerby">
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建
-    </section>
-</footer>
+        topbar.config({
+            barThickness: 3, 
+            barColors: { 
+                "0": "rgba(0, 255, 0, 0.8)",  
+                "1.0": "rgba(0, 149, 234, 0.8)" 
+            },
+            shadowBlur: 10, 
+            shadowColor: "rgba(0, 0, 0, 0.5)" 
+        });
+
+        
+        requestAnimationFrame(() => topbar.show());
+
+        
+        window.addEventListener("load", function () {
+            setTimeout(() => topbar.hide(), 500); 
+        });
+    });
+</script>
+
             </main>
         </div>
         <script 
@@ -738,6 +753,208 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<div id="aplayer"></div>
+
+
+<script>
+    const home = "https://Jayzk707.github.io/";
+    console.log(home);
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed:false,
+        autoplay: true,
+        listMaxHeight: '90px',
+        lrcType: 3,
+        audio: [
+            {
+                 name: '予你', 
+                 artist: '队长', 
+                 url: home + 'music/予你/予你.mp3', 
+                 cover: home + 'music/予你/予你.jpg', 
+                 lrc: home + 'music/予你/予你.lrc',  
+            },
+            {
+                name: '哪里都是你', 
+                artist: '队长', 
+                url: home + 'music/哪里都是你/哪里都是你.mp3', 
+                cover: home + 'music/哪里都是你/哪里都是你.jpg', 
+                lrc: home + 'music/哪里都是你/哪里都是你.lrc', 
+            },
+            {
+                name: '水星记', 
+                artist: '郭顶', 
+                url: home + 'music/水星记/水星记.mp3', 
+                cover: home + 'music/水星记/水星记.jpg', 
+                lrc: home + 'music/水星记/水星记.lrc', 
+            },
+            {
+                name: '偏爱', 
+                artist: '张芸京', 
+                url: home + 'music/偏爱/偏爱.mp3', 
+                cover: home + 'music/偏爱/偏爱.jpg', 
+                lrc: home + 'music/偏爱/偏爱.lrc', 
+            },
+         ]
+    });
+
+    
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    const player = document.getElementById('aplayer');
+
+    player.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - player.offsetLeft;
+        offsetY = e.clientY - player.offsetTop;
+        document.body.style.cursor = 'move'; 
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+            player.style.left = `${x}px`;
+            player.style.top = `${y}px`;
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default'; 
+    });
+
+
+    window.onload = function() {
+        setTimeout(function() {
+            
+            let hiddenButton = document.createElement("button");
+            hiddenButton.style.display = "none";
+            document.body.appendChild(hiddenButton);
+            hiddenButton.click(); 
+    
+            
+            setTimeout(function() {
+                const playButton = document.querySelector("#aplayer .aplayer-play");
+                if (playButton) {
+                    playButton.click(); 
+                    console.log("自动播放已尝试");
+                } else {
+                    console.log("未找到播放按钮");
+                }
+            }, 2000);
+        }, 1000); 
+    };
+
+    
+
+     window.onbeforeunload = () => {
+        
+        const playInfo = {
+            index: ap.list.index,
+            currentTime: ap.audio.currentTime,
+            paused: ap.paused
+        };
+        localStorage.setItem("playInfo", JSON.stringify(playInfo));
+    };
+
+    
+
+    window.onload = () => {
+        
+        const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+        if (!playInfo) {
+            return;
+        }
+        
+        ap.list.switch(playInfo.index);
+        
+        setTimeout(() => {
+            
+            ap.seek(playInfo.currentTime);
+            
+            if (!playInfo.paused) {
+                ap.play()
+            }
+        }, 200);
+    };
+
+
+
+</script>    
+
+
+
+<style>
+     
+    #aplayer {
+        position: fixed;   
+        top: 800px;         
+        right: 250px;       
+        z-index: 9999;     
+    }
+</style>
+
+<script src="/js/topbar.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        
+        topbar.config({
+            barThickness: 3, 
+            barColors: { 
+                "0": "rgba(0, 255, 0, 0.8)",  
+                "1.0": "rgba(0, 149, 234, 0.8)" 
+            },
+            shadowBlur: 10, 
+            shadowColor: "rgba(0, 0, 0, 0.5)" 
+        });
+
+        
+        requestAnimationFrame(() => topbar.show());
+
+        
+        window.addEventListener("load", function () {
+            setTimeout(() => topbar.hide(), 500); 
+        });
+    });
+</script>
+
+
+<div id="particles-js"></div>
+
+<style>
+    body {
+      background: url(https://Jayzk707.github.io/background/2c3.jpg) no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+  
+
+
+<script src=https://Jayzk707.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://Jayzk707.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
 
     </body>
 </html>
