@@ -840,11 +840,44 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
     videoElement.style.zIndex = "-1";  
 
     
+    videoElement.setAttribute("type", "video/mp4");
+
+    
+    videoElement.onerror = function () {
+      console.error("视频加载失败，使用默认背景图像");
+      var fallbackImage = document.createElement("img");
+      fallbackImage.src = "/assets/background/R.gif";  
+      fallbackImage.style.position = "fixed";
+      fallbackImage.style.top = "0";
+      fallbackImage.style.left = "0";
+      fallbackImage.style.width = "100%";
+      fallbackImage.style.height = "100%";
+      fallbackImage.style.objectFit = "cover";
+      fallbackImage.style.zIndex = "-1";  
+      document.body.appendChild(fallbackImage);
+    };
+
+    
     document.body.appendChild(videoElement);
+
+    
+    videoElement.play().catch(function (error) {
+      console.error("视频播放失败:", error);
+    });
+
+    console.log("背景视频应用成功:", videoSrc);
+
+    
+    videoElement.setAttribute("type", "video/mp4");
 
     console.log("Background video applied:", videoSrc);
   });
 </script>
+
+
+
+
+
 
 
 
