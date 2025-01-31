@@ -528,65 +528,12 @@
 
 
 
-<script>
-  
-  var videoSrc = "https:\/\/Jayzk707.github.io\/background\/8415211-hd_1280_720_25fps.mp4";
-
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    
-    var videoElement = document.createElement("video");
-    videoElement.src = videoSrc;
-    videoElement.autoplay = true;  
-    videoElement.loop = true;  
-    videoElement.muted = true;  
-    videoElement.playsInline = true;  
-    videoElement.style.position = "fixed";
-    videoElement.style.top = "0";
-    videoElement.style.left = "0";
-    videoElement.style.width = "100%";
-    videoElement.style.height = "100%";
-    videoElement.style.objectFit = "cover";  
-    videoElement.style.zIndex = "-1";  
-
-    
-    videoElement.setAttribute("type", "video/mp4");
-
-    
-    videoElement.onerror = function () {
-      console.error("视频加载失败，使用默认背景图像");
-      var fallbackImage = document.createElement("img");
-      fallbackImage.src = "/assets/background/R.gif";  
-      fallbackImage.style.position = "fixed";
-      fallbackImage.style.top = "0";
-      fallbackImage.style.left = "0";
-      fallbackImage.style.width = "100%";
-      fallbackImage.style.height = "100%";
-      fallbackImage.style.objectFit = "cover";
-      fallbackImage.style.zIndex = "-1";  
-      document.body.appendChild(fallbackImage);
-    };
-
-    
-    document.body.appendChild(videoElement);
-
-    
-    videoElement.play().catch(function (error) {
-      console.error("视频播放失败:", error);
-    });
-
-    console.log("背景视频应用成功:", videoSrc);
-
-    
-    videoElement.setAttribute("type", "video/mp4");
-
-    console.log("Background video applied:", videoSrc);
-  });
-</script>
-
-
-
-
+<style>
+  body {
+    background: url("/background/8415211-hd_1280_720_25fps-ezgif.com-optimize.gif") no-repeat center center fixed;
+    background-size: cover;
+  }
+</style>
 
 
 
