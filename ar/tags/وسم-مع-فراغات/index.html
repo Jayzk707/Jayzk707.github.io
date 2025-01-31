@@ -382,55 +382,6 @@
     });
 
     
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    const player = document.getElementById('aplayer');
-
-    player.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        offsetX = e.clientX - player.offsetLeft;
-        offsetY = e.clientY - player.offsetTop;
-        document.body.style.cursor = 'move'; 
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            const x = e.clientX - offsetX;
-            const y = e.clientY - offsetY;
-            player.style.left = `${x}px`;
-            player.style.top = `${y}px`;
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        document.body.style.cursor = 'default'; 
-    });
-
-
-    window.onload = function() {
-        setTimeout(function() {
-            
-            let hiddenButton = document.createElement("button");
-            hiddenButton.style.display = "none";
-            document.body.appendChild(hiddenButton);
-            hiddenButton.click(); 
-    
-            
-            setTimeout(function() {
-                const playButton = document.querySelector("#aplayer .aplayer-play");
-                if (playButton) {
-                    playButton.click(); 
-                    console.log("自动播放已尝试");
-                } else {
-                    console.log("未找到播放按钮");
-                }
-            }, 2000);
-        }, 1000); 
-    };
-
-    
 
      window.onbeforeunload = () => {
         
@@ -462,22 +413,11 @@
             }
         }, 200);
     };
-
-
-
 </script>    
 
 
 
-<style>
-     
-    #aplayer {
-        position: fixed;   
-        top: 800px;         
-        right: 250px;       
-        z-index: 9999;     
-    }
-</style>
+
 
 <script src="/js/topbar.min.js"></script>
 
@@ -507,8 +447,38 @@
 
 <div id="particles-js"></div>
 
-<script src="https://Jayzk707.github.io/background/sakura.js"></script>
-<script src="https://Jayzk707.github.io/background/particles.min.js"></script>
+<script>
+  
+  var sakuraSrc = "https:\/\/Jayzk707.github.io\/background\/sakura.js";
+  var particlesSrc = "https:\/\/Jayzk707.github.io\/background\/particles.min.js";
+  var configSrc = "https:\/\/Jayzk707.github.io\/background\/particlesjs-config.json";
+
+  
+  function loadScript(src, callback) {
+    var script = document.createElement("script");
+    script.src = src;
+    script.onload = callback;
+    script.onerror = function() { console.error("Failed to load script:", src); };
+    document.body.appendChild(script);
+  }
+
+  
+  loadScript(sakuraSrc, function() {
+    console.log("sakura.js loaded");
+  });
+
+  
+  loadScript(particlesSrc, function() {
+    console.log("particles.min.js loaded");
+
+    
+    particlesJS.load("particles-js", configSrc, function() {
+      console.log("particles.js initialized");
+    });
+  });
+</script>
+
+
 <script>
   particlesJS.load('particles-js', "https://Jayzk707.github.io/background/particlesjs-config.json", function() {
     console.log('particles.js loaded - callback');
