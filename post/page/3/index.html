@@ -595,45 +595,67 @@
     mutex="true"
     theme="#2980b9"
     list-folded="false"
-    list-max-height="340px"  
+    listMaxHeight="90px"
     storage-name="metingjs">
 
 </meting-js>
 <script>
-   
-    
-
-     window.onbeforeunload = () => {
+    window.onload = () => {
         
+        const metingElement = document.querySelector("meting-js");
+
+        
+        const observer = new MutationObserver((mutationsList, observer) => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'childList' && metingElement.aplayer) {
+                    
+                    console.log("APlayer instance found!", metingElement.aplayer);
+
+                    const ap = metingElement.aplayer;
+
+                    
+                    restorePlayerState(ap);
+
+                    
+                    window.onbeforeunload = () => {
+                        savePlayerState(ap);
+                    };
+
+                    
+                    observer.disconnect();
+                }
+            }
+        });
+
+        
+        observer.observe(metingElement, { childList: true, subtree: true });
+    };
+
+    function restorePlayerState(ap) {
+        const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+        if (playInfo) {
+            
+            ap.list.switch(playInfo.index);
+            
+            
+            setTimeout(() => {
+                ap.seek(playInfo.currentTime);  
+                if (!playInfo.paused) {
+                    ap.play();  
+                }
+            }, 2500);  
+        }
+    }
+
+    function savePlayerState(ap) {
         const playInfo = {
             index: ap.list.index,
             currentTime: ap.audio.currentTime,
-            paused: ap.paused
+            paused: ap.audio.paused
         };
         localStorage.setItem("playInfo", JSON.stringify(playInfo));
-    };
-
-    
-
-    window.onload = () => {
-        
-        const playInfo = JSON.parse(localStorage.getItem("playInfo"));
-        if (!playInfo) {
-            return;
-        }
-        
-        ap.list.switch(playInfo.index);
-        
-        setTimeout(() => {
-            
-            ap.seek(playInfo.currentTime);
-            
-            if (!playInfo.paused) {
-                ap.play()
-            }
-        }, 500);
-    };
-</script>    
+    }
+</script>
 
 
 
@@ -778,5 +800,7 @@
     }
   </script>
   
+
+
     </body>
 </html>
