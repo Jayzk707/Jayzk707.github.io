@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/kk2c3-self-introduction/'>
 
-<link rel="stylesheet" href="/scss/style.min.dd230681ddfee22694f192ba16e66c48f1cedca586f47fd91b001a8e7fdb8efb.css"><meta property='og:title' content="Kk2C3 Self Introduction">
+<link rel="stylesheet" href="/scss/style.min.58ab9fa72721f7df9b10058a98ed99caa86a49c096020c821e1d76fbf2672d0c.css"><meta property='og:title' content="Kk2C3 Self Introduction">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://Jayzk707.github.io/p/kk2c3-self-introduction/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -558,7 +558,6 @@
 </meting-js>
 <script>
     window.onload = () => {
-        
         const metingElement = document.querySelector("meting-js");
 
         
@@ -569,6 +568,9 @@
                     console.log("APlayer instance found!", metingElement.aplayer);
 
                     const ap = metingElement.aplayer;
+
+                    
+                    ap.muted = true;
 
                     
                     restorePlayerState(ap);
@@ -593,14 +595,19 @@
         if (playInfo) {
             
             ap.list.switch(playInfo.index);
-            
+
             
             setTimeout(() => {
                 ap.seek(playInfo.currentTime);  
                 if (!playInfo.paused) {
                     ap.play();  
                 }
-            }, 2500);  
+
+                
+                setTimeout(() => {
+                    ap.muted = false;  
+                }, 4000);  
+            }, 2000);  
         }
     }
 
@@ -613,6 +620,7 @@
         localStorage.setItem("playInfo", JSON.stringify(playInfo));
     }
 </script>
+
 
 
 
@@ -644,40 +652,35 @@
 </script>
 
 
-<div id="particles-js"></div>
-
-<script src="https://Jayzk707.github.io/background/sakura.js"></script>
-<script src="https://Jayzk707.github.io/background/particles.min.js"></script>
-
-<script>
-  particlesJS.load('particles-js', "https://Jayzk707.github.io/background/particlesjs-config.json", function() {
-    console.log('particles.js loaded - callback');
-  });
-</script>
-
-
-<style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-</style>
 
 <script>
   
-  var bgSrc = "https:\/\/Jayzk707.github.io\/background\/5d6f8364a4f34744a13a7296ee33187b.gif";
+  var videoSrc = "https:\/\/Jayzk707.github.io\/background\/8415211-hd_1280_720_25fps.mp4";
 
   
   document.addEventListener("DOMContentLoaded", function () {
-    document.body.style.background = `url('${bgSrc}') no-repeat center top`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundAttachment = "fixed";
-    console.log("Background image applied:", bgSrc);
+    
+    var videoElement = document.createElement("video");
+    videoElement.src = videoSrc;
+    videoElement.autoplay = true;  
+    videoElement.loop = true;  
+    videoElement.muted = true;  
+    videoElement.playsInline = true;  
+    videoElement.style.position = "fixed";
+    videoElement.style.top = "0";
+    videoElement.style.left = "0";
+    videoElement.style.width = "100%";
+    videoElement.style.height = "100%";
+    videoElement.style.objectFit = "cover";  
+    videoElement.style.zIndex = "-1";  
+
+    
+    document.body.appendChild(videoElement);
+
+    console.log("Background video applied:", videoSrc);
   });
 </script>
+
 
 
 <style>
