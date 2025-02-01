@@ -732,6 +732,13 @@
 
 
 
+<style>
+  body {
+    transform: translate3d(0, 0, 0);  
+    will-change: transform;  
+  }
+</style>
+
 <script>
   
   function setBackgroundImage() {
@@ -743,23 +750,25 @@
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundAttachment = "scroll";
+      document.body.style.backgroundAttachment = "fixed";
     } else if (width <= 768) {
       document.body.style.backgroundImage = "url('\/background\/xz.webp')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundAttachment = "scroll";
+      document.body.style.backgroundAttachment = "fixed";
     } else if (width <= 1024) {
       document.body.style.backgroundImage = "url('\/background\/xz.webp')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "fixed";
     } else {
       document.body.style.backgroundImage = "url('\/background\/xyt.webp')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "fixed";
     }
   }
 
