@@ -24,7 +24,7 @@
         (function() {
             const colorSchemeKey = 'StackColorScheme';
             if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
+                localStorage.setItem(colorSchemeKey, "dark");
             }
         })();
     </script><script>
@@ -59,8 +59,8 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_3ba2e76e300b912c.png" width="300"
-                            height="298" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/2c3_hu_13a1537c3cd95d9.gif" width="300"
+                            height="305" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
                 </a>
@@ -769,13 +769,51 @@
 
 
 <style>
+   
   body {
     background: url("/background/xyt.webp") no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover;  
+    background-position: center center;  
+
+  }
+
+   
+  @media (max-width: 480px) {
+    body {
+
+      background-size: cover;  
+      background-position: center center;  
+    }
+  }
+
+   
+  @media (max-width: 768px) {
+    body {
+
+      background-size: cover;  
+      background-position: center center;  
+    }
+  }
+
+   
+  @media (max-width: 1024px) {
+    body {
+
+      background-size: cover;  
+      background-position: center center;  
+    }
+  }
+
+   
+  @media (min-width: 1025px) {
+    body {
+      background: url("/background/xyt.webp") no-repeat center center fixed;
+      background-size: cover;
+      background-position: center center;
+
+    }
   }
 </style>
-
-
 
 
 <style>
