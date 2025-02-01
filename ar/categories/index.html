@@ -512,63 +512,43 @@
 
 
 
-<style>
-  body {
-    transform: translate3d(0, 0, 0);  
-    will-change: transform;  
-  }
-</style>
+
+
 <script>
   
   function setBackgroundImage() {
     const width = window.innerWidth; 
-    let backgroundImage;
-
+    
     
     if (width <= 480) {
-      backgroundImage = "url('\/background\/xz.webp')";
-      document.body.style.backgroundAttachment = "scroll";  
+      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "fixed";
     } else if (width <= 768) {
-      backgroundImage = "url('\/background\/xz.webp')";
-      document.body.style.backgroundAttachment = "scroll";  
+      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "fixed";
     } else if (width <= 1024) {
-      backgroundImage = "url('\/background\/xz.webp')";
-      document.body.style.backgroundAttachment = "scroll";  
-    } else {
-      backgroundImage = "url('\/background\/xyt.webp')";
-      document.body.style.backgroundAttachment = "fixed";  
-    }
-
-    
-    document.body.style.backgroundImage = backgroundImage;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
-    
-    
-    if (width <= 768) {
-      window.addEventListener('scroll', function() {
-        document.body.style.backgroundPosition = `center ${window.scrollY / 2}px`;
-      });
-    }
-  }
-
-  
-  window.onload = function() {
-    const savedBackgroundImage = sessionStorage.getItem('backgroundImage');
-
-    if (savedBackgroundImage) {
-      
-      document.body.style.backgroundImage = savedBackgroundImage;
-      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundImage = "url('\/background\/xyt.webp')";
+      document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     } else {
-      
-      setBackgroundImage();
+      document.body.style.backgroundImage = "url('\/background\/xyt.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "fixed";
     }
-  };
+  }
+
+  
+  setBackgroundImage();
 
   
   window.addEventListener('resize', function() {
