@@ -59,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/2c3_hu_13a1537c3cd95d9.gif" width="300"
+                        <img src="/img/2c3_hu_65e3d2210bc9903a.gif" width="300"
                             height="305" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -780,52 +780,48 @@
 
 
 
-<style>
-   
-  body {
-    background: url("/background/xyt.webp") no-repeat center center fixed;
-    background-size: cover;  
-    background-position: center center;  
-
-  }
-
-   
-  @media (max-width: 480px) {
-    body {
-
-      background-size: cover;  
-      background-position: center center;  
+<script>
+  
+  function setBackgroundImage() {
+    const width = window.innerWidth; 
+    
+    
+    if (width <= 480) {
+      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "scroll";
+    } else if (width <= 768) {
+      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "scroll";
+    } else if (width <= 1024) {
+      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+    } else {
+      document.body.style.backgroundImage = "url('\/background\/xyt.webp')";
+      document.body.style.backgroundSize = "cover";  
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
     }
   }
 
-   
-  @media (max-width: 768px) {
-    body {
+  
+  setBackgroundImage();
 
-      background-size: cover;  
-      background-position: center center;  
-    }
-  }
+  
+  window.addEventListener('resize', function() {
+    setBackgroundImage();
+  });
+</script>
 
-   
-  @media (max-width: 1024px) {
-    body {
 
-      background-size: cover;  
-      background-position: center center;  
-    }
-  }
 
-   
-  @media (min-width: 1025px) {
-    body {
-      background: url("/background/xyt.webp") no-repeat center center fixed;
-      background-size: cover;
-      background-position: center center;
-
-    }
-  }
-</style>
 
 
 <style>
