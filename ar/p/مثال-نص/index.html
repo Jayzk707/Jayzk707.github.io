@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/ar/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/'>
 
-<link rel="stylesheet" href="/scss/style.min.e7486af9145ed6422958e8c0439933231a133b5f73e663d5a58c018c4f1f9fa9.css"><meta property='og:title' content="مثال نص">
+<link rel="stylesheet" href="/scss/style.min.7513f027e7298e3f4e1310e2600834e949a37cd576327be371804a12bcb7d151.css"><meta property='og:title' content="مثال نص">
 <meta property='og:description' content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة">
 <meta property='og:url' content='https://Jayzk707.github.io/ar/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/'>
 <meta property='og:site_name' content='موقع تجريبي'>
@@ -398,46 +398,55 @@
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="Jayzk707/Jayzk707.github.io"
+    data-repo-id="R_kgDONxc1jg"
+    data-category="General"
+    data-category-id="DIC_kwDONxc1js4CmiY1"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="dark"
+    data-lang="zh-CN"
+    data-loading=""
+    crossorigin="anonymous"
+    async
+></script>
 <script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
         }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
     }
-</style>
 
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('dark');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
         }
-    })
+    })();
 </script>
 
     
@@ -766,20 +775,23 @@
 
 
 
+
 <style>
-    @font-face {
-      font-family: '2 ';
-      src: url(https://Jayzk707.github.io/font/fusion-pixel-12px-proportional-zh_hans.otf) format('truetype');
-    }
-  
-    :root {
-      --base-font-family: '小新';
-      --code-font-family: '小新新';
-    }
-  </style>
+  @font-face {
+    font-family: '2c3';
+    src: url('https://Jayzk707.github.io/font/fusion-pixel-10px-proportional-zh_hans.otf') format('truetype');
+  }
+
+  :root {
+    --base-font-family: '2c3';
+    --code-font-family: '2c3';
+  }
+</style>
+
   
 
-  <script>
+
+ <script>
     const cdnPath = 'https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main';
     const config = {
       
@@ -841,12 +853,169 @@
         }
       });
     }
-  </script>
+ </script>
+
+
+
+
+
+<style>
+  .highlight {
+       
+      max-height: 400px;
+      overflow: hidden;
+  }
+
+  .code-show {
+      max-height: none !important;
+  }
+
+  .code-more-box {
+      width: 100%;
+      padding-top: 78px;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+  }
+
+  .code-more-btn {
+      display: block;
+      margin: auto;
+      width: 44px;
+      height: 22px;
+      background: #f0f0f5;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding-top: 6px;
+      cursor: pointer;
+  }
+
+  .code-more-img {
+      cursor: pointer !important;
+      display: block;
+      margin: auto;
+      width: 22px;
+      height: 16px;
+  }
+</style>
+
+<script>
+function initCodeMoreBox() {
+  let codeBlocks = document.querySelectorAll(".highlight");
+  if (!codeBlocks) {
+    return;
+  }
+  codeBlocks.forEach(codeBlock => {
+    
+    if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+      return;
+    }
+    
+    
+    let codeMoreBox = document.createElement('div');
+    codeMoreBox.classList.add('code-more-box');
+    
+    let codeMoreBtn = document.createElement('span');
+    codeMoreBtn.classList.add('code-more-btn');
+    codeMoreBtn.addEventListener('click', () => {
+      codeBlock.classList.add('code-show');
+      codeMoreBox.style.display = 'none';
+    })
+    
+    let img = document.createElement('img');
+    img.classList.add('code-more-img');
+    img.src = "https://Jayzk707.github.io/icons/codeMore.png"
+    
+    codeMoreBtn.appendChild(img);
+    codeMoreBox.appendChild(codeMoreBtn);
+    codeBlock.appendChild(codeMoreBox)
+  })
+}
+
+initCodeMoreBox();
+</script>
+
+
+<style>
+  @media (min-width: 1024px) {
+    .article-list--compact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: none;
+      box-shadow: none;
+      gap: 1rem;
+  
+      article {
+        background: var(--card-background);
+        border: none;
+        box-shadow: var(--shadow-l2);
+        margin-bottom: 8px;
+        margin-right: 8px;
+        border-radius: 16px;
+      }
+    }
+  }
+</style>
+
+
+
+<style>
+  #backTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      z-index: 99;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      background-image: url(https://Jayzk707.github.io/icons/backTop.svg);
+  }
+</style>
+
+<script>
   
 
-
+  function initScrollTop() {
+      let rightSideBar = document.querySelector(".right-sidebar");
+      if (!rightSideBar) {
+          return;
+      }
+      
+      let btn = document.createElement("div");
+      btn.id = "backTopBtn";
+      btn.onclick = backToTop
+      rightSideBar.appendChild(btn)
+      
+      window.onscroll = function() {
+          
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              btn.style.display = "block";
+          } else {
+              btn.style.display = "none";
+          }
+      };
+  }
 
   
+
+  function backToTop(){
+      window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  initScrollTop();
+</script> 
+
+
+
+
+
+
+
+
+
 
 
     </body>
