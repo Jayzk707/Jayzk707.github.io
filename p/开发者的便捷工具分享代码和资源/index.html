@@ -65,126 +65,185 @@
             padding: 20px;
             background-color: #f8f8f8;  
             border-bottom: 2px solid #ddd;  
+            display: none;  
+        }
+
+        #password-section {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #error-message {
+            color: red;
+            display: none;
+            text-align: center;
         }
     </style>
 </head>
 
-
-<div class="visitor-info">
-    <details>
-        <summary>欢迎大家来访KK2C3博客！</summary>
-        <p>您的 IP 地址是：<span id="visitor-ip">Loading...</span></p>
-        <p>您的浏览器是：<span id="browser-info">Loading...</span></p>
-        <p>您的设备型号是：<span id="device-info">Loading...</span></p>
-        <p>您所在的国家是：<span id="country-info">Loading...</span></p>
-        <p>您所在的城市是：<span id="city-info">Loading...</span></p>
-        <p>本站总访问量 <span id="vercount_value_site_pv">Loading</span> 次</p>
-        <p>本站总访客数 <span id="vercount_value_site_uv">Loading</span> 人</p>
-        <p>博主码龄：<span id="site-age">Loading...</span></p>
-    </details>
-</div>
-
-
-<div>
+<body>
     
-</div>
-
-<script>
-    
-    fetch("https://ipinfo.io/json")
-    .then(response => response.json())
-    .then(data => {
-        
-        document.getElementById("visitor-ip").textContent = data.ip;
-
-        
-        document.getElementById("country-info").textContent = data.country;
-        document.getElementById("city-info").textContent = data.city || "未知城市"; 
-
-        
-        const browser = navigator.userAgent;
-        document.getElementById("browser-info").textContent = browser;
-
-        
-        let deviceInfo = "未知设备";
-        const userAgent = navigator.userAgent;
-
-        
-        const androidMatch = userAgent.match(/Android\s([0-9\.]+)[;\)]/);
-        if (androidMatch) {
-            deviceInfo = `Android设备，型号：${androidMatch[1]}`;
-        }
-
-        
-        const iphoneMatch = userAgent.match(/iPhone\sOS\s([\d_]+)/);
-        if (iphoneMatch) {
-            deviceInfo = `iPhone设备，型号：iOS ${iphoneMatch[1].replace(/_/g, '.')}`;
-        }
-
-        
-        const ipadMatch = userAgent.match(/iPad; CPU OS ([\d_]+)/);
-        if (ipadMatch) {
-            deviceInfo = `iPad设备，型号：iOS ${ipadMatch[1].replace(/_/g, '.')}`;
-        }
-
-        
-        const windowsMatch = userAgent.match(/Windows NT\s([\d\.]+)/);
-        if (windowsMatch) {
-            deviceInfo = `Windows设备，版本：${windowsMatch[1]}`;
-        }
-
-        
-        const macosMatch = userAgent.match(/Macintosh;.*Mac OS X\s([\d_]+)/);
-        if (macosMatch) {
-            deviceInfo = `macOS设备，版本：${macosMatch[1].replace(/_/g, '.')}`;
-        }
-
-        
-        const linuxMatch = userAgent.match(/Linux\s([\d\.]+)/);
-        if (linuxMatch) {
-            deviceInfo = `Linux设备，版本：${linuxMatch[1]}`;
-        }
-
-        
-        if (!androidMatch && !iphoneMatch && !ipadMatch && !windowsMatch && !macosMatch && !linuxMatch) {
-            deviceInfo = "桌面设备（操作系统无法识别）";
-        }
-
-        document.getElementById("device-info").textContent = deviceInfo;
-    })
-    .catch(error => {
-        console.error("获取访客信息失败", error);
-        document.getElementById("visitor-ip").textContent = "无法获取 IP";
-        document.getElementById("country-info").textContent = "无法获取国家";
-        document.getElementById("city-info").textContent = "无法获取城市";
-    });
-
-
-        
-    function calculateSiteAge() {
-        const startDate = new Date("2022-01-01T00:00:00"); 
-        const currentDate = new Date(); 
-        const diffInMs = currentDate - startDate; 
-
-        
-        const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
-
-        
-        const days = Math.floor(diffInMinutes / (60 * 24));
-        const hours = Math.floor((diffInMinutes % (60 * 24)) / 60);
-        const minutes = diffInMinutes % 60;
-
-        
-        const siteAge = `${days} 天 ${hours} 小时 ${minutes} 分钟`;
-        document.getElementById("site-age").textContent = siteAge;
-    }
+    <div id="password-section">欢迎大家来访KK2C3博客！
+        <input type="password" id="password-input" placeholder="请输入密码" />
+        <button onclick="unlockContent()">输入密码kk2c3解锁访客信息</button>
+        <div id="error-message">
+            密码错误，请重试。
+        </div>
+    </div>
 
     
-    setInterval(calculateSiteAge, 60000); 
+    <div class="visitor-info" id="visitor-info">
+        <details>
+            <summary>欢迎大家来访KK2C3博客！</summary>
+            <p>您的 IP 地址是：<span id="visitor-ip">Loading...</span></p>
+            <p>您的浏览器是：<span id="browser-info">Loading...</span></p>
+            <p>您的设备型号是：<span id="device-info">Loading...</span></p>
+            <p>您所在的国家是：<span id="country-info">Loading...</span></p>
+            <p>您所在的城市是：<span id="city-info">Loading...</span></p>
+            <p>本站总访问量 <span id="vercount_value_site_pv">Loading</span> 次</p>
+            <p>本站总访客数 <span id="vercount_value_site_uv">Loading</span> 人</p>
+            <p>博主码龄：<span id="site-age">Loading...</span></p>
+        </details>
+    </div>
 
     
-    calculateSiteAge();
-</script>
+    <div>
+        
+    </div>
+
+    <script>
+        
+        const correctPassword = "kk2c3"; 
+
+        
+        if (sessionStorage.getItem('isAuthenticated') === 'true') {
+            document.getElementById('visitor-info').style.display = 'block'; 
+            document.getElementById('password-section').style.display = 'none'; 
+        }
+
+        
+        function unlockContent() {
+            const inputPassword = document.getElementById('password-input').value;
+            const errorMessage = document.getElementById('error-message');
+            const visitorInfo = document.getElementById('visitor-info');
+
+            if (inputPassword === correctPassword) {
+                
+                visitorInfo.style.display = 'block';
+                errorMessage.style.display = 'none'; 
+                document.getElementById('password-section').style.display = 'none'; 
+                
+                
+                sessionStorage.setItem('isAuthenticated', 'true');
+            } else {
+                
+                errorMessage.style.display = 'block';
+            }
+        }
+        
+        document.getElementById('password-input').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                unlockContent(); 
+            }
+        });
+
+        
+        
+        fetch("https://ipinfo.io/json")
+        .then(response => response.json())
+        .then(data => {
+            
+            document.getElementById("visitor-ip").textContent = data.ip;
+
+            
+            document.getElementById("country-info").textContent = data.country;
+            document.getElementById("city-info").textContent = data.city || "未知城市"; 
+
+            
+            const browser = navigator.userAgent;
+            document.getElementById("browser-info").textContent = browser;
+
+            
+            let deviceInfo = "未知设备";
+            const userAgent = navigator.userAgent;
+
+            
+            const androidMatch = userAgent.match(/Android\s([0-9\.]+)[;\)]/);
+            if (androidMatch) {
+                deviceInfo = `Android设备，型号：${androidMatch[1]}`;
+            }
+
+            
+            const iphoneMatch = userAgent.match(/iPhone\sOS\s([\d_]+)/);
+            if (iphoneMatch) {
+                deviceInfo = `iPhone设备，型号：iOS ${iphoneMatch[1].replace(/_/g, '.')}`;
+            }
+
+            
+            const ipadMatch = userAgent.match(/iPad; CPU OS ([\d_]+)/);
+            if (ipadMatch) {
+                deviceInfo = `iPad设备，型号：iOS ${ipadMatch[1].replace(/_/g, '.')}`;
+            }
+
+            
+            const windowsMatch = userAgent.match(/Windows NT\s([\d\.]+)/);
+            if (windowsMatch) {
+                deviceInfo = `Windows设备，版本：${windowsMatch[1]}`;
+            }
+
+            
+            const macosMatch = userAgent.match(/Macintosh;.*Mac OS X\s([\d_]+)/);
+            if (macosMatch) {
+                deviceInfo = `macOS设备，版本：${macosMatch[1].replace(/_/g, '.')}`;
+            }
+
+            
+            const linuxMatch = userAgent.match(/Linux\s([\d\.]+)/);
+            if (linuxMatch) {
+                deviceInfo = `Linux设备，版本：${linuxMatch[1]}`;
+            }
+
+            
+            if (!androidMatch && !iphoneMatch && !ipadMatch && !windowsMatch && !macosMatch && !linuxMatch) {
+                deviceInfo = "桌面设备（操作系统无法识别）";
+            }
+
+            document.getElementById("device-info").textContent = deviceInfo;
+        })
+        .catch(error => {
+            console.error("获取访客信息失败", error);
+            document.getElementById("visitor-ip").textContent = "无法获取 IP";
+            document.getElementById("country-info").textContent = "无法获取国家";
+            document.getElementById("city-info").textContent = "无法获取城市";
+        });
+
+        
+        function calculateSiteAge() {
+            const startDate = new Date("2022-01-01T00:00:00"); 
+            const currentDate = new Date(); 
+            const diffInMs = currentDate - startDate; 
+
+            
+            const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+
+            
+            const days = Math.floor(diffInMinutes / (60 * 24));
+            const hours = Math.floor((diffInMinutes % (60 * 24)) / 60);
+            const minutes = diffInMinutes % 60;
+
+            
+            const siteAge = `${days} 天 ${hours} 小时 ${minutes} 分钟`;
+            document.getElementById("site-age").textContent = siteAge;
+        }
+
+        
+        setInterval(calculateSiteAge, 60000); 
+
+        
+        calculateSiteAge();
+    </script>
+</body>
+
 
 
 
@@ -1089,13 +1148,13 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
 
 <style>
   @font-face {
-    font-family: '2c3';
-    src: url('https://Jayzk707.github.io/font/%E6%B1%87%E6%96%87%E6%AD%A3%E6%A5%B7v1.001.ttf') format('truetype');
+    font-family: 'fusion-pixel-10px-proportional-zh_hans';
+    src: url('https://Jayzk707.github.io/font/fusion-pixel-10px-proportional-zh_hans.otf') format('truetype');
   }
 
   :root {
-    --base-font-family: '2c3';
-    --code-font-family: '2c3';
+    --base-font-family: 'fusion-pixel-10px-proportional-zh_hans';
+    --code-font-family: 'fusion-pixel-10px-proportional-zh_hans';
   }
 </style>
 
@@ -1515,8 +1574,8 @@ initCodeMoreBox();
                         `;
 
                         y -= 0.5; 
-                        opacity -= 0.008; 
-                        scale += 0.001; 
+                        opacity -= 0.058; 
+                        scale += 0.010; 
                     }
                 }, 30); 
             }
@@ -1771,6 +1830,8 @@ initCodeMoreBox();
 }();
 </script>
 </html>
+
+
 
 
 

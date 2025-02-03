@@ -10,7 +10,7 @@
 <meta property='og:description' content="欢迎来到kk2C3的博客,这个博客我会一直维护下去免费提供给大陆用户使用，我会不定期分享一些免费的黑科技，我也会制作一些黑科技分享给大家使用">
 <meta property='og:url' content='https://Jayzk707.github.io/post/'>
 <meta property='og:site_name' content='KK2C3'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-01T14:18:01&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-03T12:36:03&#43;08:00 '/>
 <meta name="twitter:title" content="Posts">
 <meta name="twitter:description" content="欢迎来到kk2C3的博客,这个博客我会一直维护下去免费提供给大陆用户使用，我会不定期分享一些免费的黑科技，我也会制作一些黑科技分享给大家使用"><link rel="alternate" type="application/rss&#43;xml" href="https://Jayzk707.github.io/post/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -63,126 +63,185 @@
             padding: 20px;
             background-color: #f8f8f8;  
             border-bottom: 2px solid #ddd;  
+            display: none;  
+        }
+
+        #password-section {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #error-message {
+            color: red;
+            display: none;
+            text-align: center;
         }
     </style>
 </head>
 
-
-<div class="visitor-info">
-    <details>
-        <summary>欢迎大家来访KK2C3博客！</summary>
-        <p>您的 IP 地址是：<span id="visitor-ip">Loading...</span></p>
-        <p>您的浏览器是：<span id="browser-info">Loading...</span></p>
-        <p>您的设备型号是：<span id="device-info">Loading...</span></p>
-        <p>您所在的国家是：<span id="country-info">Loading...</span></p>
-        <p>您所在的城市是：<span id="city-info">Loading...</span></p>
-        <p>本站总访问量 <span id="vercount_value_site_pv">Loading</span> 次</p>
-        <p>本站总访客数 <span id="vercount_value_site_uv">Loading</span> 人</p>
-        <p>博主码龄：<span id="site-age">Loading...</span></p>
-    </details>
-</div>
-
-
-<div>
+<body>
     
-</div>
-
-<script>
-    
-    fetch("https://ipinfo.io/json")
-    .then(response => response.json())
-    .then(data => {
-        
-        document.getElementById("visitor-ip").textContent = data.ip;
-
-        
-        document.getElementById("country-info").textContent = data.country;
-        document.getElementById("city-info").textContent = data.city || "未知城市"; 
-
-        
-        const browser = navigator.userAgent;
-        document.getElementById("browser-info").textContent = browser;
-
-        
-        let deviceInfo = "未知设备";
-        const userAgent = navigator.userAgent;
-
-        
-        const androidMatch = userAgent.match(/Android\s([0-9\.]+)[;\)]/);
-        if (androidMatch) {
-            deviceInfo = `Android设备，型号：${androidMatch[1]}`;
-        }
-
-        
-        const iphoneMatch = userAgent.match(/iPhone\sOS\s([\d_]+)/);
-        if (iphoneMatch) {
-            deviceInfo = `iPhone设备，型号：iOS ${iphoneMatch[1].replace(/_/g, '.')}`;
-        }
-
-        
-        const ipadMatch = userAgent.match(/iPad; CPU OS ([\d_]+)/);
-        if (ipadMatch) {
-            deviceInfo = `iPad设备，型号：iOS ${ipadMatch[1].replace(/_/g, '.')}`;
-        }
-
-        
-        const windowsMatch = userAgent.match(/Windows NT\s([\d\.]+)/);
-        if (windowsMatch) {
-            deviceInfo = `Windows设备，版本：${windowsMatch[1]}`;
-        }
-
-        
-        const macosMatch = userAgent.match(/Macintosh;.*Mac OS X\s([\d_]+)/);
-        if (macosMatch) {
-            deviceInfo = `macOS设备，版本：${macosMatch[1].replace(/_/g, '.')}`;
-        }
-
-        
-        const linuxMatch = userAgent.match(/Linux\s([\d\.]+)/);
-        if (linuxMatch) {
-            deviceInfo = `Linux设备，版本：${linuxMatch[1]}`;
-        }
-
-        
-        if (!androidMatch && !iphoneMatch && !ipadMatch && !windowsMatch && !macosMatch && !linuxMatch) {
-            deviceInfo = "桌面设备（操作系统无法识别）";
-        }
-
-        document.getElementById("device-info").textContent = deviceInfo;
-    })
-    .catch(error => {
-        console.error("获取访客信息失败", error);
-        document.getElementById("visitor-ip").textContent = "无法获取 IP";
-        document.getElementById("country-info").textContent = "无法获取国家";
-        document.getElementById("city-info").textContent = "无法获取城市";
-    });
-
-
-        
-    function calculateSiteAge() {
-        const startDate = new Date("2022-01-01T00:00:00"); 
-        const currentDate = new Date(); 
-        const diffInMs = currentDate - startDate; 
-
-        
-        const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
-
-        
-        const days = Math.floor(diffInMinutes / (60 * 24));
-        const hours = Math.floor((diffInMinutes % (60 * 24)) / 60);
-        const minutes = diffInMinutes % 60;
-
-        
-        const siteAge = `${days} 天 ${hours} 小时 ${minutes} 分钟`;
-        document.getElementById("site-age").textContent = siteAge;
-    }
+    <div id="password-section">欢迎大家来访KK2C3博客！
+        <input type="password" id="password-input" placeholder="请输入密码" />
+        <button onclick="unlockContent()">输入密码kk2c3解锁访客信息</button>
+        <div id="error-message">
+            密码错误，请重试。
+        </div>
+    </div>
 
     
-    setInterval(calculateSiteAge, 60000); 
+    <div class="visitor-info" id="visitor-info">
+        <details>
+            <summary>欢迎大家来访KK2C3博客！</summary>
+            <p>您的 IP 地址是：<span id="visitor-ip">Loading...</span></p>
+            <p>您的浏览器是：<span id="browser-info">Loading...</span></p>
+            <p>您的设备型号是：<span id="device-info">Loading...</span></p>
+            <p>您所在的国家是：<span id="country-info">Loading...</span></p>
+            <p>您所在的城市是：<span id="city-info">Loading...</span></p>
+            <p>本站总访问量 <span id="vercount_value_site_pv">Loading</span> 次</p>
+            <p>本站总访客数 <span id="vercount_value_site_uv">Loading</span> 人</p>
+            <p>博主码龄：<span id="site-age">Loading...</span></p>
+        </details>
+    </div>
 
     
-    calculateSiteAge();
-</script>
+    <div>
+        
+    </div>
+
+    <script>
+        
+        const correctPassword = "kk2c3"; 
+
+        
+        if (sessionStorage.getItem('isAuthenticated') === 'true') {
+            document.getElementById('visitor-info').style.display = 'block'; 
+            document.getElementById('password-section').style.display = 'none'; 
+        }
+
+        
+        function unlockContent() {
+            const inputPassword = document.getElementById('password-input').value;
+            const errorMessage = document.getElementById('error-message');
+            const visitorInfo = document.getElementById('visitor-info');
+
+            if (inputPassword === correctPassword) {
+                
+                visitorInfo.style.display = 'block';
+                errorMessage.style.display = 'none'; 
+                document.getElementById('password-section').style.display = 'none'; 
+                
+                
+                sessionStorage.setItem('isAuthenticated', 'true');
+            } else {
+                
+                errorMessage.style.display = 'block';
+            }
+        }
+        
+        document.getElementById('password-input').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                unlockContent(); 
+            }
+        });
+
+        
+        
+        fetch("https://ipinfo.io/json")
+        .then(response => response.json())
+        .then(data => {
+            
+            document.getElementById("visitor-ip").textContent = data.ip;
+
+            
+            document.getElementById("country-info").textContent = data.country;
+            document.getElementById("city-info").textContent = data.city || "未知城市"; 
+
+            
+            const browser = navigator.userAgent;
+            document.getElementById("browser-info").textContent = browser;
+
+            
+            let deviceInfo = "未知设备";
+            const userAgent = navigator.userAgent;
+
+            
+            const androidMatch = userAgent.match(/Android\s([0-9\.]+)[;\)]/);
+            if (androidMatch) {
+                deviceInfo = `Android设备，型号：${androidMatch[1]}`;
+            }
+
+            
+            const iphoneMatch = userAgent.match(/iPhone\sOS\s([\d_]+)/);
+            if (iphoneMatch) {
+                deviceInfo = `iPhone设备，型号：iOS ${iphoneMatch[1].replace(/_/g, '.')}`;
+            }
+
+            
+            const ipadMatch = userAgent.match(/iPad; CPU OS ([\d_]+)/);
+            if (ipadMatch) {
+                deviceInfo = `iPad设备，型号：iOS ${ipadMatch[1].replace(/_/g, '.')}`;
+            }
+
+            
+            const windowsMatch = userAgent.match(/Windows NT\s([\d\.]+)/);
+            if (windowsMatch) {
+                deviceInfo = `Windows设备，版本：${windowsMatch[1]}`;
+            }
+
+            
+            const macosMatch = userAgent.match(/Macintosh;.*Mac OS X\s([\d_]+)/);
+            if (macosMatch) {
+                deviceInfo = `macOS设备，版本：${macosMatch[1].replace(/_/g, '.')}`;
+            }
+
+            
+            const linuxMatch = userAgent.match(/Linux\s([\d\.]+)/);
+            if (linuxMatch) {
+                deviceInfo = `Linux设备，版本：${linuxMatch[1]}`;
+            }
+
+            
+            if (!androidMatch && !iphoneMatch && !ipadMatch && !windowsMatch && !macosMatch && !linuxMatch) {
+                deviceInfo = "桌面设备（操作系统无法识别）";
+            }
+
+            document.getElementById("device-info").textContent = deviceInfo;
+        })
+        .catch(error => {
+            console.error("获取访客信息失败", error);
+            document.getElementById("visitor-ip").textContent = "无法获取 IP";
+            document.getElementById("country-info").textContent = "无法获取国家";
+            document.getElementById("city-info").textContent = "无法获取城市";
+        });
+
+        
+        function calculateSiteAge() {
+            const startDate = new Date("2022-01-01T00:00:00"); 
+            const currentDate = new Date(); 
+            const diffInMs = currentDate - startDate; 
+
+            
+            const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+
+            
+            const days = Math.floor(diffInMinutes / (60 * 24));
+            const hours = Math.floor((diffInMinutes % (60 * 24)) / 60);
+            const minutes = diffInMinutes % 60;
+
+            
+            const siteAge = `${days} 天 ${hours} 小时 ${minutes} 分钟`;
+            document.getElementById("site-age").textContent = siteAge;
+        }
+
+        
+        setInterval(calculateSiteAge, 60000); 
+
+        
+        calculateSiteAge();
+    </script>
+</body>
+
 
 
 
@@ -487,7 +546,7 @@
                     <a href="/archives/#2025">
                         
                             <span class="year">2025</span>
-                            <span class="count">5</span>
+                            <span class="count">6</span>
                         
                     </a> 
                 </div>
@@ -632,7 +691,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">10 个页面</h3>
+                <h3 class="section-count">11 个页面</h3>
                 <h1 class="section-term">Posts</h1>
                 
             </div>
@@ -640,6 +699,23 @@
     </header>
     
     <section class="article-list--compact">
+        
+            <article>
+    <a href="/p/self-learning/">
+        <div class="article-details">
+            <h2 class="article-title">这个博客我会一直维护下去</h2>
+            <footer class="article-time">
+                <time datetime='2025-01-30T00:00:00Z'>2025-01-30</time>
+            </footer>
+        </div>
+            <div class="article-image">
+                
+                    <img src="https://vcg00.cfp.cn/creative/vcg/800/new/VCG211469741377.gif" loading="lazy" alt="Featured image of post 这个博客我会一直维护下去" />
+                
+            </div>
+        
+    </a>
+</article>
         
             <article>
     <a href="/p/%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E4%BE%BF%E6%8D%B7%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB%E4%BB%A3%E7%A0%81%E5%92%8C%E8%B5%84%E6%BA%90/">
@@ -658,17 +734,6 @@
             <h2 class="article-title">Kk2C3 Self Introduction</h2>
             <footer class="article-time">
                 <time datetime='2025-01-29T23:25:57&#43;08:00'>2025-01-29</time>
-            </footer>
-        </div>
-    </a>
-</article>
-        
-            <article>
-    <a href="/p/">
-        <div class="article-details">
-            <h2 class="article-title"></h2>
-            <footer class="article-time">
-                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
             </footer>
         </div>
     </a>
@@ -952,13 +1017,13 @@
 
 <style>
   @font-face {
-    font-family: '2c3';
-    src: url('https://Jayzk707.github.io/font/%E6%B1%87%E6%96%87%E6%AD%A3%E6%A5%B7v1.001.ttf') format('truetype');
+    font-family: 'fusion-pixel-10px-proportional-zh_hans';
+    src: url('https://Jayzk707.github.io/font/fusion-pixel-10px-proportional-zh_hans.otf') format('truetype');
   }
 
   :root {
-    --base-font-family: '2c3';
-    --code-font-family: '2c3';
+    --base-font-family: 'fusion-pixel-10px-proportional-zh_hans';
+    --code-font-family: 'fusion-pixel-10px-proportional-zh_hans';
   }
 </style>
 
@@ -1378,8 +1443,8 @@ initCodeMoreBox();
                         `;
 
                         y -= 0.5; 
-                        opacity -= 0.008; 
-                        scale += 0.001; 
+                        opacity -= 0.058; 
+                        scale += 0.010; 
                     }
                 }, 30); 
             }
@@ -1634,6 +1699,8 @@ initCodeMoreBox();
 }();
 </script>
 </html>
+
+
 
 
 

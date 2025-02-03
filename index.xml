@@ -7,7 +7,77 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KK2C3</copyright>
-        <lastBuildDate>Sat, 01 Feb 2025 14:18:01 +0800</lastBuildDate><atom:link href="https://Jayzk707.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 03 Feb 2025 12:36:03 +0800</lastBuildDate><atom:link href="https://Jayzk707.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Id</title>
+        <link>https://Jayzk707.github.io/p/id/</link>
+        <pubDate>Mon, 03 Feb 2025 12:36:03 +0800</pubDate>
+        
+        <guid>https://Jayzk707.github.io/p/id/</guid>
+        <description>&lt;p&gt;这是文章的公开部分内容，所有人都可以看到。&lt;/p&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;Base64 加密解锁示例&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h2&gt;加密内容展示&lt;/h2&gt;
+
+    &lt;div id=&#34;password-section&#34;&gt;
+        &lt;input type=&#34;password&#34; id=&#34;password-input&#34; placeholder=&#34;请输入密码&#34; /&gt;
+        &lt;button onclick=&#34;unlockContent()&#34;&gt;解锁内容&lt;/button&gt;
+        &lt;div id=&#34;error-message&#34; style=&#34;display: none; color: red;&#34;&gt;
+            密码错误，请重试。
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div id=&#34;encrypted-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;h3&gt;已解锁内容：&lt;/h3&gt;
+        &lt;p id=&#34;original-content&#34;&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        
+        const correctPassword = &#39;1234&#39;;  
+        
+        const originalText = &#34;加密内容测试。&#34;;
+
+        
+        const encodedText = btoa(originalText);  
+
+        
+        function unlockContent() {
+            const inputPassword = document.getElementById(&#39;password-input&#39;).value;
+            const encryptedContent = document.getElementById(&#39;encrypted-content&#39;);
+            const errorMessage = document.getElementById(&#39;error-message&#39;);
+            const originalContent = document.getElementById(&#39;original-content&#39;);
+
+            if (inputPassword === correctPassword) {
+                
+                encryptedContent.style.display = &#39;block&#39;;
+                originalContent.textContent = originalText;  
+                errorMessage.style.display = &#39;none&#39;;  
+                document.getElementById(&#39;password-section&#39;).style.display = &#39;none&#39;;  
+            } else {
+                
+                errorMessage.style.display = &#39;block&#39;;
+            }
+        }
+
+        
+        console.log(&#34;Base64 编码的内容: &#34;, encodedText);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;p&gt;更多文章内容。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>如何在网页中实现点击放大图片并显示透明背景</title>
         <link>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</link>
         <pubDate>Sat, 01 Feb 2025 14:18:01 +0800</pubDate>

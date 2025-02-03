@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://Jayzk707.github.io/</loc>
-    <lastmod>2025-02-01T14:18:01+08:00</lastmod>
+    <lastmod>2025-02-03T12:36:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,6 +18,22 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://Jayzk707.github.io/"
+                />
+  </url><url>
+    <loc>https://Jayzk707.github.io/p/id/</loc>
+    <lastmod>2025-02-03T12:36:03+08:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/post/</loc>
+    <lastmod>2025-02-03T12:36:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://Jayzk707.github.io/ar/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://Jayzk707.github.io/post/"
                 />
   </url><url>
     <loc>https://Jayzk707.github.io/categories/</loc>
@@ -46,19 +62,6 @@
   </url><url>
     <loc>https://Jayzk707.github.io/categories/javascript/</loc>
     <lastmod>2025-02-01T14:18:01+08:00</lastmod>
-  </url><url>
-    <loc>https://Jayzk707.github.io/post/</loc>
-    <lastmod>2025-02-01T14:18:01+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://Jayzk707.github.io/ar/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://Jayzk707.github.io/post/"
-                />
   </url><url>
     <loc>https://Jayzk707.github.io/tags/</loc>
     <lastmod>2025-02-01T14:18:01+08:00</lastmod>
