@@ -7,83 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KK2C3</copyright>
-        <lastBuildDate>Mon, 03 Feb 2025 12:36:03 +0800</lastBuildDate><atom:link href="https://Jayzk707.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Id</title>
-        <link>https://Jayzk707.github.io/p/id/</link>
-        <pubDate>Mon, 03 Feb 2025 12:36:03 +0800</pubDate>
-        
-        <guid>https://Jayzk707.github.io/p/id/</guid>
-        <description>&lt;p&gt;这是文章的公开部分内容，所有人都可以看到。&lt;/p&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;zh-CN&#34;&gt;
-&lt;head&gt;
-    &lt;meta charset=&#34;UTF-8&#34;&gt;
-    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
-    &lt;title&gt;Base64 加密解锁示例&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h2&gt;加密内容展示&lt;/h2&gt;
-
-    &lt;div id=&#34;password-section&#34;&gt;
-        &lt;input type=&#34;password&#34; id=&#34;password-input&#34; placeholder=&#34;请输入密码&#34; /&gt;
-        &lt;button onclick=&#34;unlockContent()&#34;&gt;解锁内容&lt;/button&gt;
-        &lt;div id=&#34;error-message&#34; style=&#34;display: none; color: red;&#34;&gt;
-            密码错误，请重试。
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    
-    &lt;div id=&#34;encrypted-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;h3&gt;已解锁内容：&lt;/h3&gt;
-        &lt;p id=&#34;original-content&#34;&gt;&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;script&gt;
-        
-        const correctPassword = &#39;1234&#39;;  
-        
-        const originalText = &#34;加密内容测试。&#34;;
-
-        
-        const encodedText = btoa(originalText);  
-
-        
-        function unlockContent() {
-            const inputPassword = document.getElementById(&#39;password-input&#39;).value;
-            const encryptedContent = document.getElementById(&#39;encrypted-content&#39;);
-            const errorMessage = document.getElementById(&#39;error-message&#39;);
-            const originalContent = document.getElementById(&#39;original-content&#39;);
-
-            if (inputPassword === correctPassword) {
-                
-                encryptedContent.style.display = &#39;block&#39;;
-                originalContent.textContent = originalText;  
-                errorMessage.style.display = &#39;none&#39;;  
-                document.getElementById(&#39;password-section&#39;).style.display = &#39;none&#39;;  
-            } else {
-                
-                errorMessage.style.display = &#39;block&#39;;
-            }
-        }
-
-        
-        console.log(&#34;Base64 编码的内容: &#34;, encodedText);
-    &lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-
-&lt;p&gt;更多文章内容。&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Sat, 01 Feb 2025 14:18:01 +0800</lastBuildDate><atom:link href="https://Jayzk707.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何在网页中实现点击放大图片并显示透明背景</title>
         <link>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</link>
         <pubDate>Sat, 01 Feb 2025 14:18:01 +0800</pubDate>
         
         <guid>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</guid>
-        <description>&lt;img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&amp;e=2051020800&amp;token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="Featured image of post 如何在网页中实现点击放大图片并显示透明背景" /&gt;&lt;p&gt;在这篇博客中，我们将学习如何使用简单的 HTML、CSS 和 JavaScript 来实现点击图片时放大，并且在透明背景上展示放大后的图片。这是一种常见的前端效果，能显著提升用户体验。&lt;/p&gt;
+        <description>&lt;img src="https://s1.aigei.com/src/img/gif/19/198d2c6888d74b1bb6f25e66c265a635.gif?imageMogr2/auto-orient/thumbnail/!212x132r/gravity/Center/crop/212x132/quality/85/%7CimageView2/2/w/212&amp;e=2051020800&amp;token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:WoinaDCrWGD3DEBffjESLjqciT0=" alt="Featured image of post 如何在网页中实现点击放大图片并显示透明背景" /&gt;&lt;p&gt;在这篇博客中，我们将学习如何使用简单的 HTML、CSS 和 JavaScript 来实现点击图片时放大，并且在透明背景上展示放大后的图片。这是一种常见的前端效果，能显著提升用户体验。&lt;/p&gt;
 &lt;h2 id=&#34;说明&#34;&gt;说明
 &lt;/h2&gt;&lt;p&gt;如果遇到问题可以进交流群： &lt;a class=&#34;link&#34; href=&#34;https://t.me/&amp;#43;zYAVADAj9C8xZDBh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://t.me/+zYAVADAj9C8xZDBh&lt;/a&gt;&lt;/p&gt;
@@ -1141,6 +1071,30 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://Jayzk707.github.io/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Jayzk707.github.io/p/</guid>
+        <description>&lt;!-- +++
+date = &#39;2025-02-03T12:36:03+08:00&#39;
+draft = false
+title = &#39;Id&#39;
++++
+
+这是文章的公开部分内容，所有人都可以看到。
+
+
+
+    
+
+    
+
+
+更多文章内容。 --&gt;
+</description>
         </item>
         <item>
         <title></title>
