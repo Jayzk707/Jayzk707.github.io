@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/'>
 
-<link rel="stylesheet" href="/scss/style.min.f271f33d17b0923e07bbe73e3e89cc0468ccb14638aa3cc1b8cacb4134b8f58d.css"><meta property='og:title' content="如何在网页中实现点击放大图片并显示透明背景">
+<link rel="stylesheet" href="/scss/style.min.99bd726f8548930610ba86c8b88d7cd841453005a16a450da0380b53625bbf69.css"><meta property='og:title' content="如何在网页中实现点击放大图片并显示透明背景">
 <meta property='og:description' content="本文将介绍如何在网页中实现点击图片时将其放大并显示透明背景的效果，包含完整的代码示例和详细讲解。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -46,6 +46,11 @@
     })();
 </script>
 
+        <script src="/js/loading.js"></script>
+
+
+
+        
         <script defer src="https://cn.vercount.one/js"></script>
 
         
@@ -1015,10 +1020,10 @@
     document.addEventListener("DOMContentLoaded", function () {
         
         topbar.config({
-            barThickness: 3, 
+            barThickness: 5, 
             barColors: { 
-                "0": "rgba(0, 255, 0, 0.8)",  
-                "1.0": "rgba(0, 149, 234, 0.8)" 
+                "0": "rgba(0, 149, 234, 0.8)",  
+                "1.0": "rgba(0, 255, 0, 0.8)" 
             },
             shadowBlur: 10, 
             shadowColor: "rgba(0, 0, 0, 0.5)" 
@@ -1263,10 +1268,10 @@
     document.addEventListener("DOMContentLoaded", function () {
         
         topbar.config({
-            barThickness: 3, 
+            barThickness: 5, 
             barColors: { 
-                "0": "rgba(0, 255, 0, 0.8)",  
-                "1.0": "rgba(0, 149, 234, 0.8)" 
+                "0": "rgba(0, 149, 234, 0.8)",  
+                "1.0": "rgba(0, 255, 0, 0.8)" 
             },
             shadowBlur: 10, 
             shadowColor: "rgba(0, 0, 0, 0.5)" 
@@ -2025,6 +2030,25 @@ initCodeMoreBox();
 </html>
 
 
+
+
+
+
+<div class="loading-screen">
+  
+  <div class="loading-background"></div>
+
+<div class="loading-overlay">
+  <img src="/icons/loading.gif" alt="Loading icon" class="loading-icon">
+  <div class="loading-text">欢迎大家来访KK2C3博客！...</div>
+</div>
+
+
+
+<script src="/static/js/loading.js"></script>
+
+
+<script src="/js/topbar.min.js"></script>
 
 
 
