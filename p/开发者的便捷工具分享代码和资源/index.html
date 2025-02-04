@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E4%BE%BF%E6%8D%B7%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB%E4%BB%A3%E7%A0%81%E5%92%8C%E8%B5%84%E6%BA%90/'>
 
-<link rel="stylesheet" href="/scss/style.min.99bd726f8548930610ba86c8b88d7cd841453005a16a450da0380b53625bbf69.css"><meta property='og:title' content="开发者的便捷工具：分享代码和资源">
+<link rel="stylesheet" href="/scss/style.min.edbb530d8bb6e0690f65de16d458f6f7ceffec24b59458eb50653d555953d67f.css"><meta property='og:title' content="开发者的便捷工具：分享代码和资源">
 <meta property='og:description' content="探索一些帮助开发者提高效率的在线工具和平台，包括代码分享、托管和实时编辑。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E4%BE%BF%E6%8D%B7%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB%E4%BB%A3%E7%A0%81%E5%92%8C%E8%B5%84%E6%BA%90/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -768,55 +768,23 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
      
     
         
-    <script
-    src="https://giscus.app/client.js"
-    data-repo="Jayzk707/Jayzk707.github.io"
-    data-repo-id="R_kgDONxc1jg"
-    data-category="General"
-    data-category-id="DIC_kwDONxc1js4CmiY1"
-    data-mapping="title"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="dark"
-    data-lang="zh-CN"
-    data-loading=""
-    crossorigin="anonymous"
-    async
-></script>
-<script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
-        }
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-
-    (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
-        });
-        window.addEventListener("onColorSchemeChange", handler);
-
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('dark');
-            } else {
-                setGiscusTheme('dark_dimmed');
-            }
-        }
-    })();
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"pageSize":10,"pageview":true,"requiredMeta":["name","email","url"],"serverURL":"https://waline.jay-2c3.top","wordLimit":0});
 </script>
 
     
@@ -846,6 +814,8 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
         });
     });
 </script>
+
+
 
 
     
@@ -953,9 +923,9 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
 
 
 <meting-js
-    server="tencent"
+    server="netease"
     type="playlist"
-    id="8192499244"
+    id="3064289405"
     fixed="true"
     autoplay="true"
     order="list"
@@ -1094,6 +1064,8 @@ JSFiddle 是一个在线的 HTML、CSS 和 JavaScript 编辑器，方便开发�
         });
     });
 </script>
+
+
 
 
 
@@ -1857,6 +1829,11 @@ initCodeMoreBox();
 
 
 <script src="/js/topbar.min.js"></script>
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.99bd726f8548930610ba86c8b88d7cd841453005a16a450da0380b53625bbf69.css"><meta property='og:title' content="如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏">
+<link rel="stylesheet" href="/scss/style.min.edbb530d8bb6e0690f65de16d458f6f7ceffec24b59458eb50653d555953d67f.css"><meta property='og:title' content="如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏">
 <meta property='og:description' content="本文将介绍如何使用 HTML5、CSS 和 JavaScript 制作一个简单的贪吃蛇游戏，包含完整的代码示例和详细讲解。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -1109,55 +1109,23 @@
      
     
         
-    <script
-    src="https://giscus.app/client.js"
-    data-repo="Jayzk707/Jayzk707.github.io"
-    data-repo-id="R_kgDONxc1jg"
-    data-category="General"
-    data-category-id="DIC_kwDONxc1js4CmiY1"
-    data-mapping="title"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="dark"
-    data-lang="zh-CN"
-    data-loading=""
-    crossorigin="anonymous"
-    async
-></script>
-<script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
-        }
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-
-    (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
-        });
-        window.addEventListener("onColorSchemeChange", handler);
-
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('dark');
-            } else {
-                setGiscusTheme('dark_dimmed');
-            }
-        }
-    })();
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"pageSize":10,"pageview":true,"requiredMeta":["name","email","url"],"serverURL":"https://waline.jay-2c3.top","wordLimit":0});
 </script>
 
     
@@ -1187,6 +1155,8 @@
         });
     });
 </script>
+
+
 
 
     
@@ -1294,9 +1264,9 @@
 
 
 <meting-js
-    server="tencent"
+    server="netease"
     type="playlist"
-    id="8192499244"
+    id="3064289405"
     fixed="true"
     autoplay="true"
     order="list"
@@ -1435,6 +1405,8 @@
         });
     });
 </script>
+
+
 
 
 
@@ -2198,6 +2170,11 @@ initCodeMoreBox();
 
 
 <script src="/js/topbar.min.js"></script>
+
+
+
+
+
 
 
 
