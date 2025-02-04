@@ -32,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 页面加载完成后隐藏进度条
     window.addEventListener("load", function () {
-        setTimeout(() => topbar.hide(), 500); // 延迟500ms隐藏
+        setTimeout(() => topbar.hide(), 300); // 延迟500ms隐藏
     });
 });
