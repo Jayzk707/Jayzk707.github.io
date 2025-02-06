@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>游戏开发 on KK2C3</title>
-        <link>https://www.jay-2c3.top/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</link>
+        <link>https://Jayzk707.github.io/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</link>
         <description>Recent content in 游戏开发 on KK2C3</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KK2C3博客 | 博客其他功能搭建问题联系博主KK2C3</copyright>
-        <lastBuildDate>Sat, 01 Feb 2025 13:36:49 +0800</lastBuildDate><atom:link href="https://www.jay-2c3.top/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Feb 2025 13:36:49 +0800</lastBuildDate><atom:link href="https://Jayzk707.github.io/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏</title>
-        <link>https://www.jay-2c3.top/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/</link>
+        <link>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/</link>
         <pubDate>Sat, 01 Feb 2025 13:36:49 +0800</pubDate>
         
-        <guid>https://www.jay-2c3.top/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/</guid>
+        <guid>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/</guid>
         <description>&lt;img src="https://s1.aigei.com/src/img/gif/0f/0f6e62a7bbbc4e84adaabe3e3221a5db.gif?imageMogr2/auto-orient/thumbnail/!282x282r/gravity/Center/crop/282x282/quality/85/%7CimageView2/2/w/282&amp;e=2051020800&amp;token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:bYKyPX46r566QGWsJf2FA_-VviY=" alt="Featured image of post 如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏" /&gt;&lt;p&gt;在这篇教程中，我们将介绍如何使用 HTML5、CSS 和 JavaScript 制作一个简单的贪吃蛇游戏。这是一个非常适合初学者的项目，可以帮助你掌握 JavaScript 中的事件处理、动画以及动态界面的更新。&lt;/p&gt;
 &lt;h2 id=&#34;游戏概述&#34;&gt;游戏概述
 &lt;/h2&gt;&lt;p&gt;贪吃蛇游戏的基本玩法是，玩家通过键盘控制蛇的方向，让蛇不断吃到食物，蛇身会逐渐变长。如果蛇撞到自己的身体或屏幕边缘，游戏结束。&lt;/p&gt;

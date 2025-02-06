@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>网页效果 on KK2C3</title>
-        <link>https://www.jay-2c3.top/tags/%E7%BD%91%E9%A1%B5%E6%95%88%E6%9E%9C/</link>
+        <link>https://Jayzk707.github.io/tags/%E7%BD%91%E9%A1%B5%E6%95%88%E6%9E%9C/</link>
         <description>Recent content in 网页效果 on KK2C3</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KK2C3博客 | 博客其他功能搭建问题联系博主KK2C3</copyright>
-        <lastBuildDate>Sat, 01 Feb 2025 14:18:01 +0800</lastBuildDate><atom:link href="https://www.jay-2c3.top/tags/%E7%BD%91%E9%A1%B5%E6%95%88%E6%9E%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Feb 2025 14:18:01 +0800</lastBuildDate><atom:link href="https://Jayzk707.github.io/tags/%E7%BD%91%E9%A1%B5%E6%95%88%E6%9E%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何在网页中实现点击放大图片并显示透明背景</title>
-        <link>https://www.jay-2c3.top/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</link>
+        <link>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</link>
         <pubDate>Sat, 01 Feb 2025 14:18:01 +0800</pubDate>
         
-        <guid>https://www.jay-2c3.top/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</guid>
+        <guid>https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/</guid>
         <description>&lt;p&gt;在这篇博客中，我们将学习如何使用简单的 HTML、CSS 和 JavaScript 来实现点击图片时放大，并且在透明背景上展示放大后的图片。这是一种常见的前端效果，能显著提升用户体验。&lt;/p&gt;
 &lt;h2 id=&#34;说明&#34;&gt;说明
 &lt;/h2&gt;&lt;p&gt;如果遇到问题可以进交流群： &lt;a class=&#34;link&#34; href=&#34;https://t.me/&amp;#43;zYAVADAj9C8xZDBh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
