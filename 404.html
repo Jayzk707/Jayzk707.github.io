@@ -756,8 +756,7 @@
     
     if (width <= 768) {
       document.body.style.backgroundImage = "url('\/background\/456.gif')";
-      document.body.style.backgroundSize = "100% auto";  
-      document.body.style.backgroundSize = "auto 100%";  
+      document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
@@ -780,6 +779,21 @@
   });
 </script>
 
+<head>
+  <style>
+    img, video {
+      max-width: 100%;  
+      height: auto;  
+    }
+    .container {
+      overflow: hidden;  
+    }
+    .container {
+      position: relative;  
+      overflow: hidden;  
+    }
+  </style>
+</head>
 
 
 
