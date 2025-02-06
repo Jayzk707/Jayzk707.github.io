@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.659e8b81b7519de300bb0854e6af831ab04eda5b3453abf2c34fa01af57892f7.css"><meta property='og:title' content="如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏">
+<link rel="stylesheet" href="/scss/style.min.67623a5f459057136b849b87820e1fb65890a3ac63f6ce3c0b156e7d493f9f5e.css"><meta property='og:title' content="如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏">
 <meta property='og:description' content="本文将介绍如何使用 HTML5、CSS 和 JavaScript 制作一个简单的贪吃蛇游戏，包含完整的代码示例和详细讲解。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -60,12 +60,7 @@
     <title>访客信息</title>
     <style>
          
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;   
-        }
+        body 
         .visitor-info {
             text-align: center;
             padding: 20px;
@@ -399,26 +394,6 @@
         
         
         <li >
-            <a href='/archives/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <rect x="3" y="4" width="18" height="4" rx="2" />
-  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
-  <line x1="10" y1="12" x2="14" y2="12" />
-</svg>
-
-
-
-                
-                <span>归档</span>
-            </a>
-        </li>
-        
-        
-        <li >
             <a href='/search/' >
                 
                 
@@ -452,6 +427,26 @@
 
                 
                 <span>实用工具链接</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
             </a>
         </li>
         
@@ -1050,7 +1045,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/javascript/">JavaScript</a>
+            <a href="/tags/javascript/">Javascript</a>
         
             <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</a>
         
@@ -1084,28 +1079,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">如何在网页中实现点击放大图片并显示透明背景</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
@@ -1426,7 +1399,7 @@
     
     if (width <= 768) {
       document.body.style.backgroundImage = "url('\/background\/456.gif')";
-      document.body.style.backgroundSize = "100% auto";  
+      document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundSize = "auto 100% ";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
@@ -1449,6 +1422,8 @@
     setBackgroundImage();
   });
 </script>
+
+
 
 
 
