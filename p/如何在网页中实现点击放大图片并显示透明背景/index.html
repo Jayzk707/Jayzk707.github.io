@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/'>
 
-<link rel="stylesheet" href="/scss/style.min.67623a5f459057136b849b87820e1fb65890a3ac63f6ce3c0b156e7d493f9f5e.css"><meta property='og:title' content="如何在网页中实现点击放大图片并显示透明背景">
+<link rel="stylesheet" href="/scss/style.min.659e8b81b7519de300bb0854e6af831ab04eda5b3453abf2c34fa01af57892f7.css"><meta property='og:title' content="如何在网页中实现点击放大图片并显示透明背景">
 <meta property='og:description' content="本文将介绍如何在网页中实现点击图片时将其放大并显示透明背景的效果，包含完整的代码示例和详细讲解。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -1272,28 +1272,15 @@
     const width = window.innerWidth; 
     
     
-    if (width <= 480) {
+    if (width <= 768) {
       document.body.style.backgroundImage = "url('\/background\/456.gif')";
       document.body.style.backgroundSize = "100% auto";  
-      document.body.style.backgroundSize = "auto 100%";  
-      document.body.style.backgroundPosition = "center";
-      document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundAttachment = "fixed";
-    } else if (width <= 768) {
-      document.body.style.backgroundImage = "url('\/background\/456.gif')";
-      document.body.style.backgroundSize = "100% auto";  
-      document.body.style.backgroundSize = "auto 100%";  
-      document.body.style.backgroundPosition = "center";
-      document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundAttachment = "fixed";
-    } else if (width <= 1024) {
-      document.body.style.backgroundImage = "url('\/background\/456.gif')";
-      document.body.style.backgroundSize = "100% auto";  
-      document.body.style.backgroundSize = "auto 100%";  
+      document.body.style.backgroundSize = "auto 100% ";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     } else {
+      
       document.body.style.backgroundImage = "url('\/background\/123.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
@@ -1312,12 +1299,6 @@
 </script>
 
 
-
-
-
-
-
-  
 
 
  <script>
