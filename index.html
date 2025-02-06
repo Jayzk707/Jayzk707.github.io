@@ -7,7 +7,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/'>
 
-<link rel="stylesheet" href="/scss/style.min.4e66e524f159a4df39b2d5fda0959e83ee2a269a0dbf38a6e6474a999ac91d38.css"><meta property='og:title' content="KK2C3">
+<link rel="stylesheet" href="/scss/style.min.07137d9a6f3da99b3aa9961e322d7fde1d2c3f32c407751cd082633eb67dba47.css"><meta property='og:title' content="KK2C3">
 <meta property='og:description' content="欢迎来到kk2C3的博客,这个博客我会一直维护下去免费提供给大陆用户使用，我会不定期分享一些免费的黑科技，我也会制作一些黑科技分享给大家使用">
 <meta property='og:url' content='https://Jayzk707.github.io/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -747,8 +747,8 @@
     
         
         <div>
-            👀 
-            <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span>
+            
+            🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
     
@@ -813,8 +813,8 @@
     
         
         <div>
-            👀 
-            <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span>
+            
+            🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
     
@@ -899,8 +899,8 @@
     
         
         <div>
-            👀 
-            <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span>
+            
+            🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
     
@@ -993,8 +993,8 @@
     
         
         <div>
-            👀 
-            <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span>
+            
+            🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
     
@@ -1083,8 +1083,8 @@
     
         
         <div>
-            👀 
-            <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span>
+            
+            🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
     
@@ -1165,8 +1165,8 @@
     
         
         <div>
-            👀 
-            <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span>
+            
+            🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
     
@@ -1208,12 +1208,29 @@
         });
 
         
-        requestAnimationFrame(() => topbar.show());
+        topbar.show();
 
         
-        window.addEventListener("load", function () {
-            setTimeout(() => topbar.hide(), 300); 
-        });
+        const duration = 2000; 
+        const interval = 10; 
+        const step = (100 / duration) * interval; 
+        
+        let progress = 0;
+
+        
+        const progressInterval = setInterval(function() {
+            progress += step;  
+
+            
+            if (progress <= 100) {
+                topbar.progress(progress / 100);  
+            }
+
+            if (progress >= 100) {
+                clearInterval(progressInterval);  
+                topbar.hide();  
+            }
+        }, interval);
     });
 </script><footer class="site-footer">
     <section class="copyright">
@@ -1224,7 +1241,7 @@
     
     <section class="powerby">
         Generator <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Other functions designed by <a href="https://www.jay-2c3.top" target="_blank" rel="noopener">KK2C3</a><br />
+        Other functions added  by <a href="https://www.jay-2c3.top" target="_blank" rel="noopener">KK2C3</a><br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
@@ -1389,25 +1406,25 @@
     
     
     if (width <= 480) {
-      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundImage = "url('\/background\/62f60eb00055ce5a3580bd91559f9f94.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     } else if (width <= 768) {
-      document.body.style.backgroundImage = "url('\/background\/xz.webp')";
+      document.body.style.backgroundImage = "url('\/background\/62f60eb00055ce5a3580bd91559f9f94.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     } else if (width <= 1024) {
-      document.body.style.backgroundImage = "url('\/background\/xytt.webp')";
+      document.body.style.backgroundImage = "url('\/background\/62f60eb00055ce5a3580bd91559f9f94.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     } else {
-      document.body.style.backgroundImage = "url('\/background\/xytt.webp')";
+      document.body.style.backgroundImage = "url('\/background\/7d07a255678962d30d8717dcf5dbd266.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
@@ -1429,17 +1446,6 @@
 
 
 
-<style>
-  @font-face {
-    font-family: 'fusion-pixel-10px-proportional-zh_hans';
-    src: url('https://Jayzk707.github.io/font/fusion-pixel-10px-proportional-zh_hans.otf') format('truetype');
-  }
-
-  :root {
-    --base-font-family: 'fusion-pixel-10px-proportional-zh_hans';
-    --code-font-family: 'fusion-pixel-10px-proportional-zh_hans';
-  }
-</style>
 
   
 
