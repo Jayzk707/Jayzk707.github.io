@@ -7,7 +7,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/ar/'>
 
-<link rel="stylesheet" href="/scss/style.min.3e02b9e3b392f03e68c85f3307a16c73ee9c075c8fdff72ae167444b48e2800d.css"><meta property='og:title' content="موقع تجريبي">
+<link rel="stylesheet" href="/scss/style.min.67623a5f459057136b849b87820e1fb65890a3ac63f6ce3c0b156e7d493f9f5e.css"><meta property='og:title' content="موقع تجريبي">
 <meta property='og:description' content="وصف تجريبي">
 <meta property='og:url' content='https://Jayzk707.github.io/ar/'>
 <meta property='og:site_name' content='موقع تجريبي'>
@@ -675,6 +675,15 @@
 
 
 
+<head>
+  <style>
+       
+      body {
+          margin: 0;
+          padding: 0;
+      }
+  </style>
+</head>
 
 
 
@@ -687,19 +696,32 @@
     if (width <= 768) {
       document.body.style.backgroundImage = "url('\/background\/456.gif')";
       document.body.style.backgroundSize = " auto 100%";  
-      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     } else {
       
       document.body.style.backgroundImage = "url('\/background\/123.gif')";
       document.body.style.backgroundSize = "cover";  
-      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundAttachment = "fixed";
     }
   }
-
+    
+    const style = document.createElement('style');
+    style.innerHTML = `
+      * {
+        max-width: 100%; /* 确保图片和视频不超出容器的宽度 */
+        height: auto; /* 让高度自适应，保持比例 */
+      }
+      .container {
+        overflow: hidden; /* 隐藏容器外的溢出内容 */
+        position: relative; /* 确保容器的定位 */
+      }
+    `;
+    document.head.appendChild(style); 
+  
   
   setBackgroundImage();
 
