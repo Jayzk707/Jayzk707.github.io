@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>专升本 on KK2C3</title>
+        <link>https://Jayzk707.github.io/categories/%E4%B8%93%E5%8D%87%E6%9C%AC/</link>
+        <description>Recent content in 专升本 on KK2C3</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>KK2C3博客 | 博客其他功能搭建问题联系博主KK2C3</copyright>
+        <lastBuildDate>Fri, 07 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Jayzk707.github.io/categories/%E4%B8%93%E5%8D%87%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>备战ing，后面博客将会停更📚️</title>
+        <link>https://Jayzk707.github.io/p/my-upgrade-study/</link>
+        <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Jayzk707.github.io/p/my-upgrade-study/</guid>
+        <description>&lt;img src="https://Jayzk707.github.io/p/my-upgrade-study/4d535b0e6a97bdb9f0e538ee462d569.jpg" alt="Featured image of post 备战ing，后面博客将会停更📚️" /&gt;&lt;h2 id=&#34;不怕万人阻挡只怕自我投降加油&#34;&gt;不怕万人阻挡，只怕自我投降。加油！
+&lt;/h2&gt;&lt;h2 id=&#34;目标轻化工大学也希望能上一本&#34;&gt;目标：轻化工大学（也希望能上一本）
+&lt;/h2&gt;&lt;div id=&#34;countdown&#34; class=&#34;countdown-container&#34;&gt;&lt;/div&gt;
+&lt;style&gt;
+    .countdown-container {
+        background-color:rgba(0, 234, 255, 0.81);
+        border-radius: 12px;
+        padding: 30px;
+        font-family: &#39;Arial&#39;, sans-serif;
+        font-size: 24px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
+        max-width: 500px;
+        margin: 20px auto;
+        transition: all 0.3s ease;
+    }
+
+    .countdown-container span {
+        display: inline-block;
+        margin: 5px 15px;
+        font-size: 30px;
+        font-weight: bold;
+        color:rgb(255, 255, 255);
+        padding: 10px;
+        background-color:rgb(128, 234, 255);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .countdown-container span.unit {
+        font-size: 16px;
+        color: #999;
+        font-weight: normal;
+    }
+
+    .countdown-container h3 {
+        color:rgb(0, 0, 0);
+        font-size: 26px;
+    }
+
+    .countdown-container .highlight {
+        color: #f39c12;
+        font-size: 32px;
+        font-weight: bold;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    // 设置目标日期
+    var targetDate = new Date(&#34;April 15, 2025 00:00:00&#34;).getTime();
+
+    // 更新倒计时每秒
+    var countdownInterval = setInterval(function() {
+        var currentTime = new Date().getTime();
+        var timeLeft = targetDate - currentTime;
+
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // 更新显示
+        document.getElementById(&#34;countdown&#34;).innerHTML = 
+            &#39;&lt;h3&gt;目标：&lt;span class=&#34;highlight&#34;&gt;轻化工大学&lt;/span&gt; 距离目标还有：&lt;/h3&gt;&#39; +
+            &#39;&lt;span&gt;&#39; + days + &#39; &lt;span class=&#34;unit&#34;&gt;天&lt;/span&gt;&lt;/span&gt;&#39; +
+            &#39;&lt;span&gt;&#39; + hours + &#39; &lt;span class=&#34;unit&#34;&gt;小时&lt;/span&gt;&lt;/span&gt;&#39; +
+            &#39;&lt;span&gt;&#39; + minutes + &#39; &lt;span class=&#34;unit&#34;&gt;分钟&lt;/span&gt;&lt;/span&gt;&#39; +
+            &#39;&lt;span&gt;&#39; + seconds + &#39; &lt;span class=&#34;unit&#34;&gt;秒&lt;/span&gt;&lt;/span&gt;&#39;;
+
+        // 倒计时结束后，显示消息
+        if (timeLeft &lt; 0) {
+            clearInterval(countdownInterval);
+            document.getElementById(&#34;countdown&#34;).innerHTML = &#34;&lt;h3&gt;目标达成！&lt;/h3&gt;&#34;;
+        }
+    }, 1000);
+&lt;/script&gt;
+&lt;h2 id=&#34;为什么我选择专升本&#34;&gt;为什么我选择专升本
+&lt;/h2&gt;&lt;p&gt;对于我来说，选择专升本的道路，不仅仅是为了获得更好的学历，更多的是想通过系统化的学习，提高自己的综合能力，为未来的职场打下坚实的基础。专升本不仅能提升自己的知识层次，还能让自己变得更加自信和独立。&lt;/p&gt;
+&lt;p&gt;在这条学习道路上，我时常想起自己最初的梦想：“有朝一日，我能通过知识改变命运。” 我希望通过专升本的学习，不断提升自己的认知水平，成为一个更有竞争力的人。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Jayzk707.github.io/p/my-upgrade-study/eeeaeca830cf2750f9a27f0f6a4b11b.jpg&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;https://Jayzk707.github.io/p/my-upgrade-study/eeeaeca830cf2750f9a27f0f6a4b11b_hu_e5432ce9238efdba.jpg 480w, https://Jayzk707.github.io/p/my-upgrade-study/eeeaeca830cf2750f9a27f0f6a4b11b_hu_59d7ba5de6d7cd54.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;学习&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;每次学习一样东西我都会废寝忘食的去学是个缺点也是个有点吧&#34;&gt;每次学习一样东西我都会废寝忘食的去学，是个缺点也是个有点吧😃
+&lt;/h2&gt;&lt;p&gt;通过专升本，我不仅是在提升自己的学历，也是在扩大自己的圈子为以后创业做好准备
+希望这篇文章能激励你也踏上自我提升的道路，做最好的自己，走向更光明的未来！🚀&lt;/p&gt;
+&lt;h2 id=&#34;我的学习计划&#34;&gt;我的学习计划
+&lt;/h2&gt;&lt;h3 id=&#34;1-目标&#34;&gt;1. &lt;strong&gt;目标&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;专升本的学习目标很明确：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提升英语水平，掌握更多的词汇和语法，提升听力和口语能力；&lt;/li&gt;
+&lt;li&gt;高数学习，掌握重点的数学理论和解题技巧；&lt;/li&gt;
+&lt;li&gt;计算机科学方面，学会编程、数据结构和算法的基本应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2--备战每日学习时间安排&#34;&gt;2. ** 备战每日学习时间安排**
+&lt;/h3&gt;&lt;p&gt;为了最大化学习效率，我制定了每日的学习计划。&lt;br&gt;
+每一天从早上六点半开始，直到晚上十一点半才休息。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;时间段&lt;/th&gt;
+          &lt;th&gt;学习内容&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6:30 AM - 7:30 AM&lt;/td&gt;
+          &lt;td&gt;英语学习&lt;/td&gt;
+          &lt;td&gt;阅读、记单词、听力&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7:30 AM - 9:30 AM&lt;/td&gt;
+          &lt;td&gt;高数学习&lt;/td&gt;
+          &lt;td&gt;数学公式和习题&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;9:30 AM - 11:30 AM&lt;/td&gt;
+          &lt;td&gt;计算机学习&lt;/td&gt;
+          &lt;td&gt;编程、算法&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;11:30 AM - 12:00 PM&lt;/td&gt;
+          &lt;td&gt;休息&lt;/td&gt;
+          &lt;td&gt;午餐、短时间休息&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;12:00 PM - 2:00 PM&lt;/td&gt;
+          &lt;td&gt;英语学习&lt;/td&gt;
+          &lt;td&gt;语法、口语练习&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2:00 PM - 4:00 PM&lt;/td&gt;
+          &lt;td&gt;高数学习&lt;/td&gt;
+          &lt;td&gt;高数习题和讲解&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4:00 PM - 6:00 PM&lt;/td&gt;
+          &lt;td&gt;计算机学习&lt;/td&gt;
+          &lt;td&gt;学习编程项目&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6:00 PM - 7:00 PM&lt;/td&gt;
+          &lt;td&gt;休息&lt;/td&gt;
+          &lt;td&gt;晚餐、短时间休息&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7:00 PM - 9:00 PM&lt;/td&gt;
+          &lt;td&gt;英语学习&lt;/td&gt;
+          &lt;td&gt;听力训练、写作&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;9:00 PM - 11:00 PM&lt;/td&gt;
+          &lt;td&gt;高数、计算机复习&lt;/td&gt;
+          &lt;td&gt;复习当天学习内容&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;11:00 PM - 11:30 PM&lt;/td&gt;
+          &lt;td&gt;休息&lt;/td&gt;
+          &lt;td&gt;放松，准备睡觉&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-学习方法&#34;&gt;3. &lt;strong&gt;学习方法&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;英语&lt;/strong&gt;：每天至少1小时学习，注重阅读、写作、听力和口语。可以通过看英文电影、听英文歌曲提高语言感觉。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高数&lt;/strong&gt;：每天做练习题，掌握每一个概念，理解公式的推导和应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算机&lt;/strong&gt;：先学习编程语言，再逐步深入数据结构、算法的理论与实际应用，进行项目实战。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Jayzk707.github.io/p/my-upgrade-study/4d535b0e6a97bdb9f0e538ee462d569.jpg&#34;
+	width=&#34;4032&#34;
+	height=&#34;2268&#34;
+	srcset=&#34;https://Jayzk707.github.io/p/my-upgrade-study/4d535b0e6a97bdb9f0e538ee462d569_hu_63ee981dcd8aa1f6.jpg 480w, https://Jayzk707.github.io/p/my-upgrade-study/4d535b0e6a97bdb9f0e538ee462d569_hu_601b9b9da5a4b7d8.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;学习&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;我的学习动力&#34;&gt;我的学习动力
+&lt;/h2&gt;&lt;p&gt;我相信，学习不仅是积累知识，更是自我成长和提升的过程。每当我感到疲惫和迷茫时，想起自己为之努力的目标：通过专升本，不仅改变自己的职业前景，还能提高我的思维和认知能力。为此，我时刻提醒自己：&lt;strong&gt;“坚持就是胜利！”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Jayzk707.github.io/p/my-upgrade-study/f0529ef6d273badace0910940585700.jpg&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;https://Jayzk707.github.io/p/my-upgrade-study/f0529ef6d273badace0910940585700_hu_6298153745cf5f3c.jpg 480w, https://Jayzk707.github.io/p/my-upgrade-study/f0529ef6d273badace0910940585700_hu_3245aaddde415b10.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;努力&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;专升本的挑战与机会&#34;&gt;专升本的挑战与机会
+&lt;/h2&gt;&lt;p&gt;专升本的过程充满了挑战，但同样也充满了机会。每一个难题的解决，每一次进步的实现，都让我更加坚信自己的选择是正确的。正如一句话说的：“最难走的路，往往是通向成功的道路。” 我相信，经过不断的努力和奋斗，终究会迎来属于自己的辉煌时刻。&lt;/p&gt;
+&lt;h2 id=&#34;每次学习累了看到校园的风景心情会舒适很多&#34;&gt;每次学习累了看到校园的风景心情会舒适很多🥰
+&lt;/h2&gt;&lt;p&gt;你的未来由你自己书写，考试只是其中的一章。继续努力，精彩人生在等你！&lt;/p&gt;
+&lt;video controls width=&#34;640&#34; height=&#34;360&#34;&gt;
+  &lt;source src=&#34;https://Jayzk707.github.io/videos/3fe5f7082963978c9bbcf0433ec236e1_raw.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;备考技巧&#34;&gt;&lt;strong&gt;备考技巧&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定期检查学习进度&lt;/strong&gt;：每周回顾自己的学习情况，调整学习方法和计划。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保持动力&lt;/strong&gt;：找到每天的动力源泉，可以是音乐、短视频、励志书籍等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保持良好的作息&lt;/strong&gt;：合理安排休息时间，确保充足的睡眠。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
