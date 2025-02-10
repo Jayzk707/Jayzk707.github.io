@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/enlarge-image-effect/'>
 
-<link rel="stylesheet" href="/scss/style.min.6c0b6da4fa7e57272a4636a892a59991d67946ff417d472ab9d2f38601ab4eee.css"><meta property='og:title' content="如何在网页中实现点击放大图片并显示透明背景">
+<link rel="stylesheet" href="/scss/style.min.794e566d4628896e6f180c2157a9e50463f5d1577de544f646a535abbcd1a241.css"><meta property='og:title' content="如何在网页中实现点击放大图片并显示透明背景">
 <meta property='og:description' content="本文将介绍如何在网页中实现点击图片时将其放大并显示透明背景的效果，包含完整的代码示例和详细讲解。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/enlarge-image-effect/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -554,6 +554,39 @@
 
 
             <main class="main full-width">
+    
+    <div class="share-buttons">
+    
+    <a href="weixin://dl/business/?t=%25E5%25A6%2582%25E4%25BD%2595%25E5%259C%25A8%25E7%25BD%2591%25E9%25A1%25B5%25E4%25B8%25AD%25E5%25AE%259E%25E7%258E%25B0%25E7%2582%25B9%25E5%2587%25BB%25E6%2594%25BE%25E5%25A4%25A7%25E5%259B%25BE%25E7%2589%2587%25E5%25B9%25B6%25E6%2598%25BE%25E7%25A4%25BA%25E9%2580%258F%25E6%2598%258E%25E8%2583%258C%25E6%2599%25AF&url=https%2f%2fjayzk707.github.io%2fp%2fenlarge-image-effect%2f" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=19977&format=png&color=000000" alt="微信分享" width="40" />
+        分享到微信
+    </a>
+
+    
+    <a href="mqqapi://share/to_fri?share_id=0&title=%25E5%25A6%2582%25E4%25BD%2595%25E5%259C%25A8%25E7%25BD%2591%25E9%25A1%25B5%25E4%25B8%25AD%25E5%25AE%259E%25E7%258E%25B0%25E7%2582%25B9%25E5%2587%25BB%25E6%2594%25BE%25E5%25A4%25A7%25E5%259B%25BE%25E7%2589%2587%25E5%25B9%25B6%25E6%2598%25BE%25E7%25A4%25BA%25E9%2580%258F%25E6%2598%258E%25E8%2583%258C%25E6%2599%25AF&url=https%2f%2fjayzk707.github.io%2fp%2fenlarge-image-effect%2f&summary=%25E6%259C%25AC%25E6%2596%2587%25E5%25B0%2586%25E4%25BB%258B%25E7%25BB%258D%25E5%25A6%2582%25E4%25BD%2595%25E5%259C%25A8%25E7%25BD%2591%25E9%25A1%25B5%25E4%25B8%25AD%25E5%25AE%259E%25E7%258E%25B0%25E7%2582%25B9%25E5%2587%25BB%25E5%259B%25BE%25E7%2589%2587%25E6%2597%25B6%25E5%25B0%2586%25E5%2585%25B6%25E6%2594%25BE%25E5%25A4%25A7%25E5%25B9%25B6%25E6%2598%25BE%25E7%25A4%25BA%25E9%2580%258F%25E6%2598%258E%25E8%2583%258C%25E6%2599%25AF%25E7%259A%2584%25E6%2595%2588%25E6%259E%259C%25E5%258C%2585%25E5%2590%25AB%25E5%25AE%258C%25E6%2595%25B4%25E7%259A%2584%25E4%25BB%25A3%25E7%25A0%2581%25E7%25A4%25BA%25E4%25BE%258B%25E5%2592%258C%25E8%25AF%25A6%25E7%25BB%2586%25E8%25AE%25B2%25E8%25A7%25A3" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="QQ分享" width="40" />
+        分享到QQ
+    </a>
+
+    
+    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https%2f%2fjayzk707.github.io%2fp%2fenlarge-image-effect%2f&title=%25E5%25A6%2582%25E4%25BD%2595%25E5%259C%25A8%25E7%25BD%2591%25E9%25A1%25B5%25E4%25B8%25AD%25E5%25AE%259E%25E7%258E%25B0%25E7%2582%25B9%25E5%2587%25BB%25E6%2594%25BE%25E5%25A4%25A7%25E5%259B%25BE%25E7%2589%2587%25E5%25B9%25B6%25E6%2598%25BE%25E7%25A4%25BA%25E9%2580%258F%25E6%2598%258E%25E8%2583%258C%25E6%2599%25AF&pics=https%2f%2fimg-baofun.zhhainiao.com%2ffs%2f0feb1a932efcb5aa8c20423e777c277d.jpg&summary=%25E6%259C%25AC%25E6%2596%2587%25E5%25B0%2586%25E4%25BB%258B%25E7%25BB%258D%25E5%25A6%2582%25E4%25BD%2595%25E5%259C%25A8%25E7%25BD%2591%25E9%25A1%25B5%25E4%25B8%25AD%25E5%25AE%259E%25E7%258E%25B0%25E7%2582%25B9%25E5%2587%25BB%25E5%259B%25BE%25E7%2589%2587%25E6%2597%25B6%25E5%25B0%2586%25E5%2585%25B6%25E6%2594%25BE%25E5%25A4%25A7%25E5%25B9%25B6%25E6%2598%25BE%25E7%25A4%25BA%25E9%2580%258F%25E6%2598%258E%25E8%2583%258C%25E6%2599%25AF%25E7%259A%2584%25E6%2595%2588%25E6%259E%259C%25E5%258C%2585%25E5%2590%25AB%25E5%25AE%258C%25E6%2595%25B4%25E7%259A%2584%25E4%25BB%25A3%25E7%25A0%2581%25E7%25A4%25BA%25E4%25BE%258B%25E5%2592%258C%25E8%25AF%25A6%25E7%25BB%2586%25E8%25AE%25B2%25E8%25A7%25A3" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=112853&format=png&color=000000" alt="分享按钮" width="40" />
+        分享到QQ空间
+    </a>
+    
+    <a href="https://twitter.com/share?url=https%3a%2f%2fJayzk707.github.io%2fp%2fenlarge-image-effect%2f&text=%e5%a6%82%e4%bd%95%e5%9c%a8%e7%bd%91%e9%a1%b5%e4%b8%ad%e5%ae%9e%e7%8e%b0%e7%82%b9%e5%87%bb%e6%94%be%e5%a4%a7%e5%9b%be%e7%89%87%e5%b9%b6%e6%98%be%e7%a4%ba%e9%80%8f%e6%98%8e%e8%83%8c%e6%99%af" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="40" />
+        分享到 Twitter
+    </a>
+
+    
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fJayzk707.github.io%2fp%2fenlarge-image-effect%2f" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="40" />
+        分享到 Facebook
+    </a>
+</div>
+
+
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -1088,6 +1121,7 @@
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
+    
 
             </main>
         </div>
@@ -1975,7 +2009,6 @@ initCodeMoreBox();
 
 
 <script src="/js/topbar.min.js"></script>
-
 
 
 
