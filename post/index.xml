@@ -76,7 +76,7 @@
 
         // 更新显示
         document.getElementById(&#34;countdown&#34;).innerHTML = 
-            &#39;&lt;h3&gt;目标：&lt;span class=&#34;highlight&#34;&gt;轻化工大学&lt;/span&gt; 距离目标还有：&lt;/h3&gt;&#39; +
+            &#39;&lt;h3&gt;目标：&lt;span class=&#34;highlight&#34;&gt;轻化工大学&lt;/span&gt; 距离目标还剩：&lt;/h3&gt;&#39; +
             &#39;&lt;span&gt;&#39; + days + &#39; &lt;span class=&#34;unit&#34;&gt;天&lt;/span&gt;&lt;/span&gt;&#39; +
             &#39;&lt;span&gt;&#39; + hours + &#39; &lt;span class=&#34;unit&#34;&gt;小时&lt;/span&gt;&lt;/span&gt;&#39; +
             &#39;&lt;span&gt;&#39; + minutes + &#39; &lt;span class=&#34;unit&#34;&gt;分钟&lt;/span&gt;&lt;/span&gt;&#39; +
