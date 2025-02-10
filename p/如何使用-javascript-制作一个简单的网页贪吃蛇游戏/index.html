@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.794e566d4628896e6f180c2157a9e50463f5d1577de544f646a535abbcd1a241.css"><meta property='og:title' content="如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏">
+<link rel="stylesheet" href="/scss/style.min.aa16a5bb025bf81bed256b01edfbdae9ffdb1abf107afd3ad0945077382d2cc7.css"><meta property='og:title' content="如何使用 JavaScript 制作一个简单的网页贪吃蛇游戏">
 <meta property='og:description' content="本文将介绍如何使用 HTML5、CSS 和 JavaScript 制作一个简单的贪吃蛇游戏，包含完整的代码示例和详细讲解。">
 <meta property='og:url' content='https://Jayzk707.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-javascript-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%BD%91%E9%A1%B5%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8F/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -552,36 +552,103 @@
 
             <main class="main full-width">
     
-    <div class="share-buttons">
     
-    <a href="weixin://dl/business/?t=%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E7%25BD%2591%25E9%25A1%25B5%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F&url=https%2f%2fjayzk707.github.io%2fp%2f%25e5%25a6%2582%25e4%25bd%2595%25e4%25bd%25bf%25e7%2594%25a8-javascript-%25e5%2588%25b6%25e4%25bd%259c%25e4%25b8%2580%25e4%25b8%25aa%25e7%25ae%2580%25e5%258d%2595%25e7%259a%2584%25e7%25bd%2591%25e9%25a1%25b5%25e8%25b4%25aa%25e5%2590%2583%25e8%259b%2587%25e6%25b8%25b8%25e6%2588%258f%2f" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=19977&format=png&color=000000" alt="微信分享" width="40" />
-        分享到微信
-    </a>
 
-    
-    <a href="mqqapi://share/to_fri?share_id=0&title=%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E7%25BD%2591%25E9%25A1%25B5%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F&url=https%2f%2fjayzk707.github.io%2fp%2f%25e5%25a6%2582%25e4%25bd%2595%25e4%25bd%25bf%25e7%2594%25a8-javascript-%25e5%2588%25b6%25e4%25bd%259c%25e4%25b8%2580%25e4%25b8%25aa%25e7%25ae%2580%25e5%258d%2595%25e7%259a%2584%25e7%25bd%2591%25e9%25a1%25b5%25e8%25b4%25aa%25e5%2590%2583%25e8%259b%2587%25e6%25b8%25b8%25e6%2588%258f%2f&summary=%25E6%259C%25AC%25E6%2596%2587%25E5%25B0%2586%25E4%25BB%258B%25E7%25BB%258D%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-html5css-%25E5%2592%258C-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F%25E5%258C%2585%25E5%2590%25AB%25E5%25AE%258C%25E6%2595%25B4%25E7%259A%2584%25E4%25BB%25A3%25E7%25A0%2581%25E7%25A4%25BA%25E4%25BE%258B%25E5%2592%258C%25E8%25AF%25A6%25E7%25BB%2586%25E8%25AE%25B2%25E8%25A7%25A3" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="QQ分享" width="40" />
-        分享到QQ
+<div class="share-buttons">
+        
+    <a href="#" id="copy-link-button">
+        <img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="复制链接分享链接" width="30" />
+        复制链接分享给朋友
     </a>
-
     
-    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https%2f%2fjayzk707.github.io%2fp%2f%25e5%25a6%2582%25e4%25bd%2595%25e4%25bd%25bf%25e7%2594%25a8-javascript-%25e5%2588%25b6%25e4%25bd%259c%25e4%25b8%2580%25e4%25b8%25aa%25e7%25ae%2580%25e5%258d%2595%25e7%259a%2584%25e7%25bd%2591%25e9%25a1%25b5%25e8%25b4%25aa%25e5%2590%2583%25e8%259b%2587%25e6%25b8%25b8%25e6%2588%258f%2f&title=%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E7%25BD%2591%25E9%25A1%25B5%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F&pics=https%2f%2fs1.aigei.com%2fsrc%2fimg%2fgif%2f0f%2f0f6e62a7bbbc4e84adaabe3e3221a5db.gifimagemogr2%2fauto-orient%2fthumbnail%2f282x282r%2fgravity%2fcenter%2fcrop%2f282x282%2fquality%2f85%2f%257cimageview2%2f2%2fw%2f282e2051020800tokenp7s2xpzfz11vakasltkfhn7fw-oozbecqejaxyplbykypx46r566qgwsjf2fa_-vviy&summary=%25E6%259C%25AC%25E6%2596%2587%25E5%25B0%2586%25E4%25BB%258B%25E7%25BB%258D%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-html5css-%25E5%2592%258C-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F%25E5%258C%2585%25E5%2590%25AB%25E5%25AE%258C%25E6%2595%25B4%25E7%259A%2584%25E4%25BB%25A3%25E7%25A0%2581%25E7%25A4%25BA%25E4%25BE%258B%25E5%2592%258C%25E8%25AF%25A6%25E7%25BB%2586%25E8%25AE%25B2%25E8%25A7%25A3" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=112853&format=png&color=000000" alt="分享按钮" width="40" />
+    <a href="#" id="share-qqzone" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
         分享到QQ空间
+    </a>
+
+    
+    <a href="#" id="share-qq" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="分享给QQ好友" width="30" />
+        分享给QQ好友
+    </a>
+
+    
+    <a href="#" id="share-weibo" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=20910&format=png&color=000000" alt="分享到新浪微博" width="30" />
+        分享到新浪微博
+    </a>
+
+    
+    <a href="#" id="share-weixin" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=ShP6gieSywkK&format=png&color=000000" alt="分享到微信" width="30" />
+        分享到微信
     </a>
     
     <a href="https://twitter.com/share?url=https%3a%2f%2fJayzk707.github.io%2fp%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E7%25BD%2591%25E9%25A1%25B5%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F%2f&text=%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%20JavaScript%20%e5%88%b6%e4%bd%9c%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e7%bd%91%e9%a1%b5%e8%b4%aa%e5%90%83%e8%9b%87%e6%b8%b8%e6%88%8f" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="40" />
+        <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="30" />
         分享到 Twitter
     </a>
 
     
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fJayzk707.github.io%2fp%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8-javascript-%25E5%2588%25B6%25E4%25BD%259C%25E4%25B8%2580%25E4%25B8%25AA%25E7%25AE%2580%25E5%258D%2595%25E7%259A%2584%25E7%25BD%2591%25E9%25A1%25B5%25E8%25B4%25AA%25E5%2590%2583%25E8%259B%2587%25E6%25B8%25B8%25E6%2588%258F%2f" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="40" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="30" />
         分享到 Facebook
     </a>
 </div>
+
+
+
+
+<script>
+    
+    function getShareContent() {
+        const url = window.location.href; 
+        const title = document.title; 
+        const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述"; 
+        const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : ""; 
+    
+        return { url, title, description, image };
+    }
+    
+    
+    document.getElementById('share-qqzone').addEventListener('click', function() {
+        const { url, title, description, image } = getShareContent();
+        const qqzoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}`;
+        window.open(qqzoneUrl, '_blank');
+    });
+    
+    
+    document.getElementById('share-qq').addEventListener('click', function() {
+        const { url, title, description, image } = getShareContent();
+        const qqUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}&desc=${encodeURIComponent(description)}`;
+        window.open(qqUrl, '_blank');
+    });
+    
+    
+    document.getElementById('share-weibo').addEventListener('click', function() {
+        const { url, title, description, image } = getShareContent();
+        const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}&searchPic=false&desc=${encodeURIComponent(description)}`;
+        window.open(weiboUrl, '_blank');
+    });
+    
+    document.getElementById('copy-link-button').addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const { url, title, description, image } = getShareContent();
+
+        
+        const input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+
+        
+        alert('链接已复制，您可以分享到微信或其他平台！');
+    });
+</script>
+
 
 
     <article class="has-image main-article">
@@ -1200,6 +1267,105 @@
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+
+<div class="share-buttons">
+        
+    <a href="#" id="copy-link-button">
+        <img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="复制链接分享链接" width="30" />
+        复制链接分享给朋友
+    </a>
+    
+    <a href="#" id="share-qqzone" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
+        分享到QQ空间
+    </a>
+
+    
+    <a href="#" id="share-qq" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="分享给QQ好友" width="30" />
+        分享给QQ好友
+    </a>
+
+    
+    <a href="#" id="share-weibo" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=20910&format=png&color=000000" alt="分享到新浪微博" width="30" />
+        分享到新浪微博
+    </a>
+
+    
+    <a href="#" id="share-weixin" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=ShP6gieSywkK&format=png&color=000000" alt="分享到微信" width="30" />
+        分享到微信
+    </a>
+    
+    <a href="https://twitter.com/share?url=https%3a%2f%2fJayzk707.github.io%2f404.html&text=404%20Page%20not%20found" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="30" />
+        分享到 Twitter
+    </a>
+
+    
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fJayzk707.github.io%2f404.html" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="30" />
+        分享到 Facebook
+    </a>
+</div>
+
+
+
+
+
+<script>
+
+function getShareContent() {
+    const url = window.location.href; 
+    const title = document.title; 
+    const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述"; 
+    const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : ""; 
+
+    return { url, title, description, image };
+}
+
+
+document.getElementById('share-qqzone').addEventListener('click', function() {
+    const { url, title, description, image } = getShareContent();
+    const qqzoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}`;
+    window.open(qqzoneUrl, '_blank');
+});
+
+
+document.getElementById('share-qq').addEventListener('click', function() {
+    const { url, title, description, image } = getShareContent();
+    const qqUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}&desc=${encodeURIComponent(description)}`;
+    window.open(qqUrl, '_blank');
+});
+
+
+document.getElementById('share-weibo').addEventListener('click', function() {
+    const { url, title, description, image } = getShareContent();
+    const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}&searchPic=false&desc=${encodeURIComponent(description)}`;
+    window.open(weiboUrl, '_blank');
+});
+
+document.getElementById('copy-link-button').addEventListener('click', function(event) {
+    event.preventDefault(); 
+
+    const { url, title, description, image } = getShareContent();
+
+    
+    const input = document.createElement('input');
+    input.value = url;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+
+    
+    alert('链接已复制，您可以分享到微信或其他平台！');
+});
+</script>
+
 
 
     
@@ -2167,8 +2333,6 @@ initCodeMoreBox();
 
 
 <script src="/js/topbar.min.js"></script>
-
-
 
 
 
