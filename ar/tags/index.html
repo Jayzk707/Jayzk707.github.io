@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/ar/tags/'>
 
-<link rel="stylesheet" href="/scss/style.min.aa16a5bb025bf81bed256b01edfbdae9ffdb1abf107afd3ad0945077382d2cc7.css"><meta property='og:title' content="Tags">
+<link rel="stylesheet" href="/scss/style.min.1fa1681da5ad3f92cdadde586a34df3597ae0bcb558e346f15bb302f130c7dfb.css"><meta property='og:title' content="Tags">
 <meta property='og:description' content="وصف تجريبي">
 <meta property='og:url' content='https://Jayzk707.github.io/ar/tags/'>
 <meta property='og:site_name' content='موقع تجريبي'>
@@ -22,18 +22,14 @@
         <script src="/js/loading.js"></script>
 
 
+    
+    <a href="https://photo.jay-2c3.top" target="_blank">
+        <img src="https://photo.jay-2c3.top/file/d54xWqiJ.gif" alt="Facebook Share" width="30" />
+        KK2C3图床地址
+    </a>
 
-        
-        <script defer src="https://cn.vercount.one/js"></script>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-        <script src="https://npm.taobao.org/mirrors/jquery/3.6.0/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://fastly.jsdelivr.net/gh/react@17.0.2/umd/react.production.min.js"></script>
-        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-        <script src="https://npm.webcache.cn/vuex/3.6.2/dist/vuex.min.js"></script>
-        <script src="https://registry.npmmirror.comaxios/0.21.1/dist/axios.min.js"></script>
+
+
     </head>
     <body class="">
     <script>
@@ -554,6 +550,12 @@
         <img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="复制链接分享链接" width="30" />
         复制链接分享给朋友
     </a>
+
+    
+    <a href="https://photo.jay-2c3.top" target="_blank">
+        <img src="https://photo.jay-2c3.top/file/WvP7BGZ7.gif" alt="Facebook Share" width="30" />
+        kk2c3图床地址
+    </a>
     
     <a href="#" id="share-qqzone" target="_blank">
         <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
@@ -596,51 +598,68 @@
 
 <script>
 
-function getShareContent() {
-    const url = window.location.href; 
-    const title = document.title; 
-    const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述"; 
-    const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : ""; 
+function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent);
+}
 
+
+function getShareContent() {
+    const url = window.location.href;
+    const title = document.title;
+    const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述";
+    const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : "";
     return { url, title, description, image };
 }
 
 
-document.getElementById('share-qqzone').addEventListener('click', function() {
-    const { url, title, description, image } = getShareContent();
-    const qqzoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}`;
-    window.open(qqzoneUrl, '_blank');
+document.getElementById('share-qq').addEventListener('click', function() {
+    const { url, title, description } = getShareContent();
+
+    if (isMobileDevice()) {
+        
+        const qqMobileUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&share_id=1101685683&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+        window.location.href = qqMobileUrl;
+    } else {
+        
+        const qqPCUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+        window.open(qqPCUrl, '_blank');
+    }
 });
 
 
-document.getElementById('share-qq').addEventListener('click', function() {
+document.getElementById('share-qqzone').addEventListener('click', function() {
     const { url, title, description, image } = getShareContent();
-    const qqUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}&desc=${encodeURIComponent(description)}`;
-    window.open(qqUrl, '_blank');
+    const qqZoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}&pics=${encodeURIComponent(image)}`;
+    window.open(qqZoneUrl, '_blank');
+});
+
+
+document.getElementById('share-weixin').addEventListener('click', function() {
+    if (isMobileDevice()) {
+        alert('请长按复制链接，在微信中粘贴发送给好友！');
+    } else {
+        alert('请使用微信扫描二维码进行分享！');
+    }
 });
 
 
 document.getElementById('share-weibo').addEventListener('click', function() {
     const { url, title, description, image } = getShareContent();
-    const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}&searchPic=false&desc=${encodeURIComponent(description)}`;
+    const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}`;
     window.open(weiboUrl, '_blank');
 });
 
+
 document.getElementById('copy-link-button').addEventListener('click', function(event) {
-    event.preventDefault(); 
-
-    const { url, title, description, image } = getShareContent();
-
-    
+    event.preventDefault();
+    const { url } = getShareContent();
     const input = document.createElement('input');
     input.value = url;
     document.body.appendChild(input);
     input.select();
     document.execCommand('copy');
     document.body.removeChild(input);
-
-    
-    alert('链接已复制，您可以分享到微信或其他平台！');
+    alert('链接已复制，请分享到微信或其他平台！');
 });
 </script>
 
@@ -792,7 +811,17 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
 
 
 
+        
+<script defer src="https://cn.vercount.one/js"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://npm.taobao.org/mirrors/jquery/3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://npm.webcache.cn/vuex/3.6.2/dist/vuex.min.js"></script>
+<script src="https://registry.npmmirror.comaxios/0.21.1/dist/axios.min.js"></script>
 
 <head>
   <style>
@@ -813,14 +842,14 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
     
     
     if (width <= 768) {
-      document.body.style.backgroundImage = "url('\/background\/456.gif')";
+      document.body.style.backgroundImage = "url('https://photo.jay-2c3.top/file/OYgqztj9.gif')";
       document.body.style.backgroundSize = "540px 960px";  
       document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "repeat";
       document.body.style.backgroundAttachment = "scroll";  
     } else {
       
-      document.body.style.backgroundImage = "url('\/background\/123.gif')";
+      document.body.style.backgroundImage = "url('https://photo.jay-2c3.top/file/fL1DhnVa.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "no-repeat";

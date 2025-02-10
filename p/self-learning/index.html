@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/p/self-learning/'>
 
-<link rel="stylesheet" href="/scss/style.min.aa16a5bb025bf81bed256b01edfbdae9ffdb1abf107afd3ad0945077382d2cc7.css"><meta property='og:title' content="这个博客我会一直维护下去">
+<link rel="stylesheet" href="/scss/style.min.1fa1681da5ad3f92cdadde586a34df3597ae0bcb558e346f15bb302f130c7dfb.css"><meta property='og:title' content="这个博客我会一直维护下去">
 <meta property='og:description' content="如何通过自学提升自己">
 <meta property='og:url' content='https://Jayzk707.github.io/p/self-learning/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -23,18 +23,14 @@
         <script src="/js/loading.js"></script>
 
 
+    
+    <a href="https://photo.jay-2c3.top" target="_blank">
+        <img src="https://photo.jay-2c3.top/file/d54xWqiJ.gif" alt="Facebook Share" width="30" />
+        KK2C3图床地址
+    </a>
 
-        
-        <script defer src="https://cn.vercount.one/js"></script>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-        <script src="https://npm.taobao.org/mirrors/jquery/3.6.0/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://fastly.jsdelivr.net/gh/react@17.0.2/umd/react.production.min.js"></script>
-        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-        <script src="https://npm.webcache.cn/vuex/3.6.2/dist/vuex.min.js"></script>
-        <script src="https://registry.npmmirror.comaxios/0.21.1/dist/axios.min.js"></script>
+
+
     </head>
     <body class="
     article-page
@@ -536,9 +532,9 @@
   <ol>
     <li><a href="#为什么要自学">为什么要自学</a>
       <ol>
-        <li><a href="#我为什么会开始自学">我为什么会开始自学</a>
+        <li><a href="#我为什么会开始自学">我为什么会开始自学</a></li>
+        <li><a href="#1-防止被骗">1. 防止被骗</a>
           <ol>
-            <li><a href="#1-防止被骗">1. 防止被骗</a></li>
             <li><a href="#2-提高认知">2. 提高认知</a></li>
             <li><a href="#3-防止误入歧途">3. 防止误入歧途</a></li>
           </ol>
@@ -577,16 +573,25 @@
         复制链接分享给朋友
     </a>
     
-    <a href="#" id="share-qqzone" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
-        分享到QQ空间
+    <a href="https://photo.jay-2c3.top" target="_blank">
+        <img src="https://photo.jay-2c3.top/file/WvP7BGZ7.gif" alt="Facebook Share" width="30" />
+        kk2c3图床地址
     </a>
+
 
     
     <a href="#" id="share-qq" target="_blank">
         <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="分享给QQ好友" width="30" />
         分享给QQ好友
     </a>
+
+    
+    <a href="#" id="share-qqzone" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
+        分享到QQ空间
+    </a>
+
+
 
     
     <a href="#" id="share-weibo" target="_blank">
@@ -604,65 +609,84 @@
         <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="30" />
         分享到 Twitter
     </a>
-
     
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fJayzk707.github.io%2fp%2fself-learning%2f" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="30" />
         分享到 Facebook
     </a>
+
+
 </div>
 
 
 
 
 <script>
-    
-    function getShareContent() {
-        const url = window.location.href; 
-        const title = document.title; 
-        const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述"; 
-        const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : ""; 
-    
-        return { url, title, description, image };
+
+function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent);
+}
+
+
+function getShareContent() {
+    const url = window.location.href;
+    const title = document.title;
+    const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述";
+    const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : "";
+    return { url, title, description, image };
+}
+
+
+document.getElementById('share-qq').addEventListener('click', function() {
+    const { url, title, description } = getShareContent();
+
+    if (isMobileDevice()) {
+        
+        const qqMobileUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&share_id=1101685683&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+        window.location.href = qqMobileUrl;
+    } else {
+        
+        const qqPCUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+        window.open(qqPCUrl, '_blank');
     }
-    
-    
-    document.getElementById('share-qqzone').addEventListener('click', function() {
-        const { url, title, description, image } = getShareContent();
-        const qqzoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}`;
-        window.open(qqzoneUrl, '_blank');
-    });
-    
-    
-    document.getElementById('share-qq').addEventListener('click', function() {
-        const { url, title, description, image } = getShareContent();
-        const qqUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}&desc=${encodeURIComponent(description)}`;
-        window.open(qqUrl, '_blank');
-    });
-    
-    
-    document.getElementById('share-weibo').addEventListener('click', function() {
-        const { url, title, description, image } = getShareContent();
-        const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}&searchPic=false&desc=${encodeURIComponent(description)}`;
-        window.open(weiboUrl, '_blank');
-    });
-    
-    document.getElementById('copy-link-button').addEventListener('click', function(event) {
-        event.preventDefault(); 
+});
 
-        const { url, title, description, image } = getShareContent();
 
-        
-        const input = document.createElement('input');
-        input.value = url;
-        document.body.appendChild(input);
-        input.select();
-        document.execCommand('copy');
-        document.body.removeChild(input);
+document.getElementById('share-qqzone').addEventListener('click', function() {
+    const { url, title, description, image } = getShareContent();
+    const qqZoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}&pics=${encodeURIComponent(image)}`;
+    window.open(qqZoneUrl, '_blank');
+});
 
-        
-        alert('链接已复制，您可以分享到微信或其他平台！');
-    });
+
+document.getElementById('share-weixin').addEventListener('click', function() {
+    if (isMobileDevice()) {
+        alert('请长按复制链接，在微信中粘贴发送给好友！');
+    } else {
+        alert('请使用微信扫描二维码进行分享！');
+    }
+});
+
+
+document.getElementById('share-weibo').addEventListener('click', function() {
+    const { url, title, description, image } = getShareContent();
+    const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}`;
+    window.open(weiboUrl, '_blank');
+});
+
+
+document.getElementById('copy-link-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    const { url } = getShareContent();
+    const input = document.createElement('input');
+    input.value = url;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+    alert('链接已复制，请分享到微信或其他平台！');
+});
+
 </script>
 
 
@@ -760,36 +784,27 @@
     <h2 id="为什么要自学">为什么要自学
 </h2><p>每个人的基础和背景都不一样，学习并不是一件简单的事情。老师教授的内容通常是针对中等水平的学生，而每个人的学习情况不同，因此主动学习、针对自身基础进行调整，才能更好地掌握知识。
 <video controls width="640" height="360">
-<source src="/videos/shaonian_meiyou_naizhi_hua.mp4" type="video/mp4">
+<source src="https://photo.jay-2c3.top/file/ppcNiRgy.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video></p>
 <h3 id="我为什么会开始自学">我为什么会开始自学
-</h3><p>我之所以开始自学，最本质的原因是<strong>想提高认知，从而提升自己，实现更好的赚钱能力</strong>。以下是促使我自学的几个关键原因：
-<img src="/p/self-learning/leo_visions-nzdvmBa8lb0-unsplash.jpg"
-	width="5184"
-	height="3456"
-	srcset="/p/self-learning/leo_visions-nzdvmBa8lb0-unsplash_hu_6f4d5ae5e53a4ea7.jpg 480w, /p/self-learning/leo_visions-nzdvmBa8lb0-unsplash_hu_d6d4f6ba17b56ece.jpg 1024w"
-	loading="lazy"
-	
-		alt="Photo by Florian Klauer on Unsplash"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="150"
-		data-flex-basis="360px"
-	
-></p>
-<h4 id="1-防止被骗">1. 防止被骗
-</h4><p>在大学一年级的时候，我曾被网上的“知识无用论”影响，认为学习无意义。这里的“知识”并非学校课程，而是课外书籍和能够促使行动的知识。</p>
+</h3><p>我之所以开始自学，最本质的原因是<strong>想提高认知，从而提升自己，实现更好的赚钱能力</strong>。以下是促使我自学的几个关键原因：</p>
+<p><img src="https://photo.jay-2c3.top/file/7LTXkfNH.jpeg" 
+width="4032" height="2268" 
+loading="lazy" alt="学习" 
+class="gallery-image"></p>
+<h3 id="1-防止被骗">1. 防止被骗
+</h3><p>在大学一年级的时候，我曾被网上的“知识无用论”影响，认为学习无意义。这里的“知识”并非学校课程，而是课外书籍和能够促使行动的知识。</p>
 <p>当时我没有什么社会经验，正值区块链和元宇宙大热，许多 NFT 头像（如猴子 IP）成为热门投资项目。有人告诉我可以通过区块链赚钱，我轻信了，结果被骗了钱。</p>
 <blockquote>
 <p><strong>骗子往往很聪明，提高自我认知和警觉意识非常重要！</strong></p></blockquote>
 <h4 id="2-提高认知">2. 提高认知
 </h4><p>被骗后，我开始反思，意识到他们所谓的赚钱方式存在明显的逻辑漏洞——<strong>为什么教我赚钱还要我交钱？</strong>  这让我意识到认知的重要性。</p>
-<p>如果我有更高的认知水平，就可以更轻松地识破骗局。因此，我决定自学技术，不再盲目相信他人。
-<a href="chris-saran-1whO1awI5ao-unsplash.jpg" target="_blank">
-<img src="chris-saran-1whO1awI5ao-unsplash.jpg" alt="Photo by Florian Klauer on Unsplash" width="300">
-</a></p>
+<p>如果我有更高的认知水平，就可以更轻松地识破骗局。因此，我决定自学技术，不再盲目相信他人。</p>
+<p><img src="https://photo.jay-2c3.top/file/oVpFPywd.jpg" 
+width="4032" height="2268" 
+loading="lazy" alt="学习" 
+class="gallery-image"></p>
 <h4 id="3-防止误入歧途">3. 防止误入歧途
 </h4><p>被骗后，我一度有过一个错误的想法：“他们能骗我，为什么我不能去骗别人？”</p>
 <p>但很快我意识到，这种思维是极度错误的。即使能短期获利，最终也会一无所有。我没有去骗人，但这种想法的出现让我警惕，促使我开始真正提升自己。</p>
@@ -810,6 +825,10 @@ Your browser does not support the video tag.
 <p>有了清晰的目标，才能更有针对性地安排学习计划。</p>
 <h3 id="3-培养自主学习能力">3. <strong>培养自主学习能力</strong>
 </h3><p>自学的关键是培养<strong>主动学习的意识和方法</strong>，除了阅读，还要<strong>善于思考、总结和实践</strong>，养成探索和求知的习惯。</p>
+<p><img src="https://photo.jay-2c3.top/file/zhB1CNr2.jpg" 
+width="4032" height="2268" 
+loading="lazy" alt="学习" 
+class="gallery-image"></p>
 <h3 id="4-合理安排时间">4. <strong>合理安排时间</strong>
 </h3><p>自学需要投入大量时间和精力，因此要合理规划，避免盲目学习或过度学习。可以将学习目标<strong>分解成小任务</strong>，每天完成一部分。</p>
 <h3 id="5-善用学习资源">5. <strong>善用学习资源</strong>
@@ -834,20 +853,10 @@ Your browser does not support the video tag.
 <h2 id="结语">结语
 </h2><p>自学是一个漫长的过程，需要耐心和毅力。如今，我已经通过自学掌握了许多以前无法想象的知识。</p>
 <p><strong>希望这篇文章能激励更多人开始自学，提升认知，实现更大的目标！</strong> 🚀</p>
-<p>![自学]<img src="/p/self-learning/pexels-claudio-vignola-2148860490-30402151.jpg"
-	width="3024"
-	height="4032"
-	srcset="/p/self-learning/pexels-claudio-vignola-2148860490-30402151_hu_ff0f1134c89ea387.jpg 480w, /p/self-learning/pexels-claudio-vignola-2148860490-30402151_hu_338179c9db1fb4cc.jpg 1024w"
-	loading="lazy"
-	
-		alt="Photo by Luca Bravo on Unsplash"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="75"
-		data-flex-basis="180px"
-	
-></p>
+<p><img src="https://photo.jay-2c3.top/file/hKjzYkB0.jpg" 
+width="4032" height="2268" 
+loading="lazy" alt="自学" 
+class="gallery-image"></p>
 
 </section>
 
@@ -888,13 +897,8 @@ Your browser does not support the video tag.
         
         
             <div class="article-image">
-                <img src="/p/my-upgrade-study/20240327115756.cc62a17390c71a2879f7cdbbb69d5f31_hu_24791d8ac6751a4.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 备战ing，后面博客将会停更📚️"
-                        data-key="my-upgrade-study" 
-                        data-hash="md5-zGKhc5DHGih59827tp1fMQ==">
+                
+                    <img src="https://photo.jay-2c3.top/file/iGvsaX8N.jpg" loading="lazy" data-key="my-upgrade-study" data-hash="https://photo.jay-2c3.top/file/iGvsaX8N.jpg"/>
                 
             </div>
         
@@ -999,6 +1003,12 @@ Your browser does not support the video tag.
         <img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="复制链接分享链接" width="30" />
         复制链接分享给朋友
     </a>
+
+    
+    <a href="https://photo.jay-2c3.top" target="_blank">
+        <img src="https://photo.jay-2c3.top/file/WvP7BGZ7.gif" alt="Facebook Share" width="30" />
+        kk2c3图床地址
+    </a>
     
     <a href="#" id="share-qqzone" target="_blank">
         <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
@@ -1041,51 +1051,68 @@ Your browser does not support the video tag.
 
 <script>
 
-function getShareContent() {
-    const url = window.location.href; 
-    const title = document.title; 
-    const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述"; 
-    const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : ""; 
+function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent);
+}
 
+
+function getShareContent() {
+    const url = window.location.href;
+    const title = document.title;
+    const description = document.querySelector('meta[name="description"]') ? document.querySelector('meta[name="description"]').getAttribute('content') : "默认描述";
+    const image = document.querySelector('meta[property="og:image"]') ? document.querySelector('meta[property="og:image"]').getAttribute('content') : "";
     return { url, title, description, image };
 }
 
 
-document.getElementById('share-qqzone').addEventListener('click', function() {
-    const { url, title, description, image } = getShareContent();
-    const qqzoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}`;
-    window.open(qqzoneUrl, '_blank');
+document.getElementById('share-qq').addEventListener('click', function() {
+    const { url, title, description } = getShareContent();
+
+    if (isMobileDevice()) {
+        
+        const qqMobileUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&share_id=1101685683&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+        window.location.href = qqMobileUrl;
+    } else {
+        
+        const qqPCUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+        window.open(qqPCUrl, '_blank');
+    }
 });
 
 
-document.getElementById('share-qq').addEventListener('click', function() {
+document.getElementById('share-qqzone').addEventListener('click', function() {
     const { url, title, description, image } = getShareContent();
-    const qqUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&sharesource=qzone&title=${encodeURIComponent(title)}&pics=${encodeURIComponent(image)}&summary=${encodeURIComponent(description)}&desc=${encodeURIComponent(description)}`;
-    window.open(qqUrl, '_blank');
+    const qqZoneUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}&pics=${encodeURIComponent(image)}`;
+    window.open(qqZoneUrl, '_blank');
+});
+
+
+document.getElementById('share-weixin').addEventListener('click', function() {
+    if (isMobileDevice()) {
+        alert('请长按复制链接，在微信中粘贴发送给好友！');
+    } else {
+        alert('请使用微信扫描二维码进行分享！');
+    }
 });
 
 
 document.getElementById('share-weibo').addEventListener('click', function() {
     const { url, title, description, image } = getShareContent();
-    const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}&searchPic=false&desc=${encodeURIComponent(description)}`;
+    const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}`;
     window.open(weiboUrl, '_blank');
 });
 
+
 document.getElementById('copy-link-button').addEventListener('click', function(event) {
-    event.preventDefault(); 
-
-    const { url, title, description, image } = getShareContent();
-
-    
+    event.preventDefault();
+    const { url } = getShareContent();
     const input = document.createElement('input');
     input.value = url;
     document.body.appendChild(input);
     input.select();
     document.execCommand('copy');
     document.body.removeChild(input);
-
-    
-    alert('链接已复制，您可以分享到微信或其他平台！');
+    alert('链接已复制，请分享到微信或其他平台！');
 });
 </script>
 
@@ -1316,7 +1343,17 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
 
 
 
+        
+<script defer src="https://cn.vercount.one/js"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://npm.taobao.org/mirrors/jquery/3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://npm.webcache.cn/vuex/3.6.2/dist/vuex.min.js"></script>
+<script src="https://registry.npmmirror.comaxios/0.21.1/dist/axios.min.js"></script>
 
 <head>
   <style>
@@ -1337,14 +1374,14 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
     
     
     if (width <= 768) {
-      document.body.style.backgroundImage = "url('\/background\/456.gif')";
+      document.body.style.backgroundImage = "url('https://photo.jay-2c3.top/file/OYgqztj9.gif')";
       document.body.style.backgroundSize = "540px 960px";  
       document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "repeat";
       document.body.style.backgroundAttachment = "scroll";  
     } else {
       
-      document.body.style.backgroundImage = "url('\/background\/123.gif')";
+      document.body.style.backgroundImage = "url('https://photo.jay-2c3.top/file/fL1DhnVa.gif')";
       document.body.style.backgroundSize = "cover";  
       document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "no-repeat";
