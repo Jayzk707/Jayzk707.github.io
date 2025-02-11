@@ -216,7 +216,7 @@ class=&#34;gallery-image&#34;&gt;&lt;/p&gt;
         <pubDate>Tue, 04 Feb 2025 23:00:31 +0800</pubDate>
         
         <guid>https://Jayzk707.github.io/p/%E8%BF%99%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%98%AF%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95%E6%AC%A2%E8%BF%8E%E5%A4%A7%E5%AE%B6%E6%9D%A5%E8%AF%84%E8%AE%BA/</guid>
-        <description></description>
+        <description>&lt;img src="https://photo.kk2c3.top/file/UsNrdoy5.gif" alt="Featured image of post 这篇博客是评论测试,欢迎大家来评论" /&gt;</description>
         </item>
         <item>
         <title>Id</title>
@@ -224,14 +224,17 @@ class=&#34;gallery-image&#34;&gt;&lt;/p&gt;
         <pubDate>Mon, 03 Feb 2025 12:36:03 +0800</pubDate>
         
         <guid>https://Jayzk707.github.io/p/id/</guid>
-        <description>&lt;p&gt;这是文章的公开部分内容，所有人都可以看到。&lt;/p&gt;
+        <description>&lt;img src="https://photo.kk2c3.top/file/tN8JD8W2.gif" alt="Featured image of post Id" /&gt;&lt;p&gt;这是文章的公开部分内容，所有人都可以看到。&lt;/p&gt;
 
 
     
 
     
 
-&lt;p&gt;更多文章内容。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://photo.kk2c3.top/file/tN8JD8W2.gif&#34; 
+width=&#34;4032&#34; height=&#34;2268&#34; 
+loading=&#34;lazy&#34; alt=&#34;学习&#34; 
+class=&#34;gallery-image&#34;&gt;&lt;/p&gt;
 </description>
         </item>
         <item>

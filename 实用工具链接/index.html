@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/'>
 
-<link rel="stylesheet" href="/scss/style.min.1fa1681da5ad3f92cdadde586a34df3597ae0bcb558e346f15bb302f130c7dfb.css"><meta property='og:title' content="实用工具链接">
+<link rel="stylesheet" href="/scss/style.min.dc6f25a24ea5b5fbdc934abf0d491ed76ae43d4c71215b81fc2a66fe7b5de137.css"><meta property='og:title' content="实用工具链接">
 <meta property='og:description' content="@KK2C3 &ldquo;https://2c3.jay-2c3.top/#dt_1738073737078\"\n">
 <meta property='og:url' content='https://Jayzk707.github.io/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -22,11 +22,7 @@
         <script src="/js/loading.js"></script>
 
 
-    
-    <a href="https://photo.jay-2c3.top" target="_blank">
-        <img src="https://photo.jay-2c3.top/file/d54xWqiJ.gif" alt="Facebook Share" width="30" />
-        KK2C3图床地址
-    </a>
+
 
 
 
@@ -63,13 +59,58 @@
     
     <style>
          
-        body 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;  
+            margin: 10px;
+        }
+        
+
         .visitor-info {
             text-align: center;
             padding: 20px;
             background-color: #f8f8f8;  
             border-bottom: 2px solid #ddd;  
             display: none;  
+            width: 100%;
+            box-sizing: border-box;
+            
+        }
+        
+        .image-container {
+            text-align: center;
+            justify-content: center;  
+            align-items: center;  
+            gap: 10px;  
+            margin-top: 20px;
+        }
+        
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            justify-content: center;      
+            
+        }
+
+
+        .heart-image {
+            width: 100px;
+            height: 100px;
+            justify-content: center;   
+        }
+
+        #timer {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
         #password-section {
@@ -86,168 +127,43 @@
 </head>
 
 <body>
-    
-    <div id="password-section">欢迎大家来访KK2C3博客！
-        <input type="password" id="password-input" placeholder="请输入密码" />
-        <button onclick="unlockContent()">输入密码kk2c3解锁访客信息</button>
-        <div id="error-message">
-            密码错误，请重试。
-        </div>
+    <div class="visitor-info">
+        访客信息
     </div>
-
-    
-    <div class="visitor-info" id="visitor-info">
-        <details>
-            <summary>欢迎大家来访KK2C3博客！</summary>
-            <p>您的 IP 地址是：<span id="visitor-ip">Loading...</span></p>
-            <p>您的浏览器是：<span id="browser-info">Loading...</span></p>
-            <p>您的设备型号是：<span id="device-info">Loading...</span></p>
-            <p>您所在的国家是：<span id="country-info">Loading...</span></p>
-            <p>您所在的城市是：<span id="city-info">Loading...</span></p>
-            <p>本站总访问量 <span id="vercount_value_site_pv">Loading</span> 次</p>
-            <p>本站总访客数 <span id="vercount_value_site_uv">Loading</span> 人</p>
-            <p>博主码龄：<span id="site-age">Loading...</span></p>
-        </details>
-    </div>
-
-    
-    <div>
+    <div class="image-container" >
         
-    </div>
+        <a href="https://photo.kk2c3.top/file/rgTh7DEJ.jpg" target="_blank">
+            <img src="https://photo.kk2c3.top/file/rgTh7DEJ.jpg"  alt="头像1" class="avatar avatar-left">
+        </a>
+
+
+        <a href="https://photo.jay-2c3.top" target="_blank">
+            <img src="https://photo.kk2c3.top/file/84a9T5Qy.gif" alt="Heart" class="heart-image">
+        </a>
+        
+        <a href="https://photo.kk2c3.top/file/x3tan69I.jpg" target="_blank">
+            <img src="https://photo.kk2c3.top/file/x3tan69I.jpg" alt="头像2"class="avatar avatar-left" >
+        </a>
+
+    <div id="timer">和YLY已经在一起的第：0 天 0 小时 0 分钟 0 秒</div>
 
     <script>
-        
-        const correctPassword = "kk2c3"; 
-
-        
-        if (sessionStorage.getItem('isAuthenticated') === 'true') {
-            document.getElementById('visitor-info').style.display = 'block'; 
-            document.getElementById('password-section').style.display = 'none'; 
+        function updateTimer() {
+            const startDate = new Date("2023-06-18T00:00:00");
+            const now = new Date();
+            const diff = now - startDate;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            
+            document.getElementById("timer").innerText = `和YLY在一起的第：${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒`;
         }
-
-        
-        function unlockContent() {
-            const inputPassword = document.getElementById('password-input').value;
-            const errorMessage = document.getElementById('error-message');
-            const visitorInfo = document.getElementById('visitor-info');
-
-            if (inputPassword === correctPassword) {
-                
-                visitorInfo.style.display = 'block';
-                errorMessage.style.display = 'none'; 
-                document.getElementById('password-section').style.display = 'none'; 
-                
-                
-                sessionStorage.setItem('isAuthenticated', 'true');
-            } else {
-                
-                errorMessage.style.display = 'block';
-            }
-        }
-        
-        document.getElementById('password-input').addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                unlockContent(); 
-            }
-        });
-
-        
-        
-        fetch("https://ipinfo.io/json")
-        .then(response => response.json())
-        .then(data => {
-            
-            document.getElementById("visitor-ip").textContent = data.ip;
-
-            
-            document.getElementById("country-info").textContent = data.country;
-            document.getElementById("city-info").textContent = data.city || "未知城市"; 
-
-            
-            const browser = navigator.userAgent;
-            document.getElementById("browser-info").textContent = browser;
-
-            
-            let deviceInfo = "未知设备";
-            const userAgent = navigator.userAgent;
-
-            
-            const androidMatch = userAgent.match(/Android\s([0-9\.]+)[;\)]/);
-            if (androidMatch) {
-                deviceInfo = `Android设备，型号：${androidMatch[1]}`;
-            }
-
-            
-            const iphoneMatch = userAgent.match(/iPhone\sOS\s([\d_]+)/);
-            if (iphoneMatch) {
-                deviceInfo = `iPhone设备，型号：iOS ${iphoneMatch[1].replace(/_/g, '.')}`;
-            }
-
-            
-            const ipadMatch = userAgent.match(/iPad; CPU OS ([\d_]+)/);
-            if (ipadMatch) {
-                deviceInfo = `iPad设备，型号：iOS ${ipadMatch[1].replace(/_/g, '.')}`;
-            }
-
-            
-            const windowsMatch = userAgent.match(/Windows NT\s([\d\.]+)/);
-            if (windowsMatch) {
-                deviceInfo = `Windows设备，版本：${windowsMatch[1]}`;
-            }
-
-            
-            const macosMatch = userAgent.match(/Macintosh;.*Mac OS X\s([\d_]+)/);
-            if (macosMatch) {
-                deviceInfo = `macOS设备，版本：${macosMatch[1].replace(/_/g, '.')}`;
-            }
-
-            
-            const linuxMatch = userAgent.match(/Linux\s([\d\.]+)/);
-            if (linuxMatch) {
-                deviceInfo = `Linux设备，版本：${linuxMatch[1]}`;
-            }
-
-            
-            if (!androidMatch && !iphoneMatch && !ipadMatch && !windowsMatch && !macosMatch && !linuxMatch) {
-                deviceInfo = "桌面设备（操作系统无法识别）";
-            }
-
-            document.getElementById("device-info").textContent = deviceInfo;
-        })
-        .catch(error => {
-            console.error("获取访客信息失败", error);
-            document.getElementById("visitor-ip").textContent = "无法获取 IP";
-            document.getElementById("country-info").textContent = "无法获取国家";
-            document.getElementById("city-info").textContent = "无法获取城市";
-        });
-
-        
-        function calculateSiteAge() {
-            const startDate = new Date("2022-01-01T00:00:00"); 
-            const currentDate = new Date(); 
-            const diffInMs = currentDate - startDate; 
-
-            
-            const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
-
-            
-            const days = Math.floor(diffInMinutes / (60 * 24));
-            const hours = Math.floor((diffInMinutes % (60 * 24)) / 60);
-            const minutes = diffInMinutes % 60;
-
-            
-            const siteAge = `${days} 天 ${hours} 小时 ${minutes} 分钟`;
-            document.getElementById("site-age").textContent = siteAge;
-        }
-
-        
-        setInterval(calculateSiteAge, 60000); 
-
-        
-        calculateSiteAge();
+        setInterval(updateTimer, 1000);
+        updateTimer();
     </script>
 </body>
-
 
 
 
@@ -516,12 +432,12 @@
 <div class="share-buttons">
         
     <a href="#" id="copy-link-button">
-        <img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="复制链接分享链接" width="30" />
+        <img src="https://photo.kk2c3.top/file/UsNrdoy5.gif" alt="复制链接分享链接" width="30" />
         复制链接分享给朋友
     </a>
     
     <a href="https://photo.jay-2c3.top" target="_blank">
-        <img src="https://photo.jay-2c3.top/file/WvP7BGZ7.gif" alt="Facebook Share" width="30" />
+        <img src="https://photo.kk2c3.top/file/i5LdczpX.gif" alt="Facebook Share" width="30" />
         kk2c3图床地址
     </a>
 
@@ -590,7 +506,6 @@ document.getElementById('share-qq').addEventListener('click', function() {
     if (isMobileDevice()) {
         
 
-    
         
         const fixedUrl = url.startsWith('http') ? url : 'https://' + url;
     
@@ -685,7 +600,7 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
     
     
         
-        <div>          
+        <div class="info-box">          
             🧑‍💻 <span>KK2C3</span><br />📖  <span>阅读量：</span><span id="vercount_value_page_pv">Loading</span> 
         </div>
       
@@ -962,29 +877,33 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
 
 
 
+
 <div class="share-buttons">
         
     <a href="#" id="copy-link-button">
-        <img src="https://s1.aigei.com/src/img/gif/b5/b597e1bb014b4e849709e31355413213.gif?imageMogr2/auto-orient/thumbnail/!132x132r/gravity/Center/crop/132x132/quality/85/%7CimageView2/2/w/132&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:xl8k7UhvlmT2S2P5SSZiETlJLHg=" alt="复制链接分享链接" width="30" />
+        <img src="https://photo.kk2c3.top/file/UsNrdoy5.gif" alt="复制链接分享链接" width="30" />
         复制链接分享给朋友
     </a>
-
     
     <a href="https://photo.jay-2c3.top" target="_blank">
-        <img src="https://photo.jay-2c3.top/file/WvP7BGZ7.gif" alt="Facebook Share" width="30" />
+        <img src="https://photo.kk2c3.top/file/i5LdczpX.gif" alt="Facebook Share" width="30" />
         kk2c3图床地址
     </a>
-    
-    <a href="#" id="share-qqzone" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
-        分享到QQ空间
-    </a>
+
 
     
     <a href="#" id="share-qq" target="_blank">
         <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="分享给QQ好友" width="30" />
         分享给QQ好友
     </a>
+
+    
+    <a href="#" id="share-qqzone" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
+        分享到QQ空间
+    </a>
+
+
 
     
     <a href="#" id="share-weibo" target="_blank">
@@ -1002,14 +921,14 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
         <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="30" />
         分享到 Twitter
     </a>
-
     
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fJayzk707.github.io%2f404.html" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="30" />
         分享到 Facebook
     </a>
-</div>
 
+
+</div>
 
 
 
@@ -1031,12 +950,17 @@ function getShareContent() {
 
 
 document.getElementById('share-qq').addEventListener('click', function() {
-    const { url, title, description } = getShareContent();
+    const { url, title, description, image } = getShareContent();
 
     if (isMobileDevice()) {
         
-        const qqMobileUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&share_id=1101685683&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-        window.location.href = qqMobileUrl;
+
+        
+        const fixedUrl = url.startsWith('http') ? url : 'https://' + url;
+    
+        const qqUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&url=${encodeURIComponent(fixedUrl)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&image_url=${encodeURIComponent(image)}`;
+    
+        window.location.href = qqUrl; 
     } else {
         
         const qqPCUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
@@ -1079,8 +1003,8 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
     document.body.removeChild(input);
     alert('链接已复制，请分享到微信或其他平台！');
 });
-</script>
 
+</script>
 
 
     
@@ -2067,6 +1991,10 @@ initCodeMoreBox();
 </script>
 
 
+
+
+
+<script defer src="https://cn.vercount.one/js"></script>
 
 
     </body>
