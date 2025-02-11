@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/categories/%E4%B8%93%E5%8D%87%E6%9C%AC/'>
 
-<link rel="stylesheet" href="/scss/style.min.28cbc1f17f273ef5d589ca890250b1b3eeec91769f0c1875365f60985482e7c5.css"><meta property='og:title' content="Category: 专升本 - KK2C3">
+<link rel="stylesheet" href="/scss/style.min.9a190189d32a7be3ce6b2ae7e93b526d5ea03b5180c30358caa43b3cacb71577.css"><meta property='og:title' content="Category: 专升本 - KK2C3">
 <meta property='og:description' content="欢迎来到kk2C3的博客,这个博客我会一直维护下去免费提供给大陆用户使用，我会不定期分享一些免费的黑科技，我也会制作一些黑科技分享给大家使用">
 <meta property='og:url' content='https://Jayzk707.github.io/categories/%E4%B8%93%E5%8D%87%E6%9C%AC/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -973,6 +973,7 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
 
 
 
+
         
 
 <head>
@@ -1751,105 +1752,6 @@ initCodeMoreBox();
 
 
 
-
-<div id="lightbox" class="lightbox" style="display: none;">
-    <div class="lightbox-content">
-        <img id="lightbox-image" src="" alt="放大图片">
-        <button id="prev-btn" class="nav-btn">上一张</button>
-        <button id="next-btn" class="nav-btn">下一张</button>
-        <button id="close-btn" class="close-btn">关闭</button>
-    </div>
-</div>
-
-<style>
-    .lightbox {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
-    .lightbox-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        text-align: center;
-    }
-    .lightbox img {
-        max-width: 100%;
-        max-height: 100%;
-        transition: transform 0.3s ease;
-    }
-    .nav-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-    #prev-btn {
-        left: 10px;
-    }
-    #next-btn {
-        right: 10px;
-    }
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: rgba(255, 0, 0, 0.7);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-</style>
-<script>
-    
-    const images = document.querySelectorAll('img');
-    let currentImageIndex = -1; 
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    
-    
-    function openLightbox(index) {
-        currentImageIndex = index;
-        lightbox.style.display = 'flex';
-        lightboxImage.src = images[index].src;
-    }
-    
-    
-    document.getElementById('close-btn').addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-    
-    
-    document.getElementById('prev-btn').addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        lightboxImage.src = images[currentImageIndex].src;
-    });
-    
-    
-    document.getElementById('next-btn').addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        lightboxImage.src = images[currentImageIndex].src;
-    });
-    
-    
-    images.forEach((image, index) => {
-        image.addEventListener('click', () => {
-            openLightbox(index); 
-        });
-    });
-</script>
 
 
 
