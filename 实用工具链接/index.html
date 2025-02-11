@@ -585,12 +585,18 @@ function getShareContent() {
 
 
 document.getElementById('share-qq').addEventListener('click', function() {
-    const { url, title, description } = getShareContent();
+    const { url, title, description, image } = getShareContent();
 
     if (isMobileDevice()) {
         
-        const qqMobileUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&share_id=1101685683&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
-        window.location.href = qqMobileUrl;
+
+    
+        
+        const fixedUrl = url.startsWith('http') ? url : 'https://' + url;
+    
+        const qqUrl = `mqqapi://share/to_fri?src_type=web&version=1&file_type=news&url=${encodeURIComponent(fixedUrl)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&image_url=${encodeURIComponent(image)}`;
+    
+        window.location.href = qqUrl; 
     } else {
         
         const qqPCUrl = `http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
@@ -1303,16 +1309,6 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
 
 
         
-<script defer src="https://cn.vercount.one/js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-<script src="https://npm.taobao.org/mirrors/jquery/3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://fastly.jsdelivr.net/gh/react@17.0.2/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-<script src="https://npm.webcache.cn/vuex/3.6.2/dist/vuex.min.js"></script>
-<script src="https://registry.npmmirror.comaxios/0.21.1/dist/axios.min.js"></script>
 
 <head>
   <style>
@@ -2054,6 +2050,21 @@ initCodeMoreBox();
 <script src="/js/topbar.min.js"></script>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () { 
+      
+      document.querySelector(".loading-background").classList.remove("hide");
+
+      
+      setTimeout(() => {
+          document.querySelector(".loading-background").style.opacity = "0"; 
+
+          setTimeout(() => {
+              document.querySelector(".loading-screen").classList.add("hide"); 
+          }, 500); 
+      }, 2000); 
+  });
+</script>
 
 
 
