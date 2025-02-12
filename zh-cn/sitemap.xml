@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://Jayzk707.github.io/</loc>
-    <lastmod>2025-02-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://Jayzk707.github.io/categories/</loc>
-    <lastmod>2025-02-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,6 +37,24 @@
                 hreflang="zh-cn"
                 href="https://Jayzk707.github.io/categories/"
                 />
+  </url><url>
+    <loc>https://Jayzk707.github.io/page/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/categories/%E5%90%89%E4%BB%96/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/categories/%E8%A7%86%E9%A2%91/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/immersive-learning-videos/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Jayzk707.github.io/categories/%E9%9F%B3%E4%B9%90/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Jayzk707.github.io/post/</loc>
     <lastmod>2025-02-07T00:00:00+00:00</lastmod>
@@ -146,18 +164,13 @@
     <loc>https://Jayzk707.github.io/p/kk2c3-self-introduction/</loc>
     <lastmod>2025-01-29T23:25:57+08:00</lastmod>
   </url><url>
-    <loc>https://Jayzk707.github.io/page/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://Jayzk707.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Jayzk707.github.io/categories/test/</loc>
   </url><url>
-    <loc>https://Jayzk707.github.io/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://Jayzk707.github.io/search/</loc>
   </url><url>
     <loc>https://Jayzk707.github.io/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/</loc>
-  </url><url>
-    <loc>https://Jayzk707.github.io/search/</loc>
   </url>
 </urlset>
