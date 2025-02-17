@@ -131,7 +131,7 @@
     </div>
     <div class="image-container" >
         
-        <a href="https://photo.kk2c3.top/file/rgTh7DEJ.jpg" target="_blank">
+        <a >
             <img src="https://photo.kk2c3.top/file/rgTh7DEJ.jpg"  alt="头像1" class="avatar avatar-left">
         </a>
 
@@ -140,28 +140,76 @@
             <img src="https://photo.kk2c3.top/file/84a9T5Qy.gif" alt="Heart" class="heart-image">
         </a>
         
-        <a href="https://photo.kk2c3.top/file/x3tan69I.jpg" target="_blank">
+        <a >
             <img src="https://photo.kk2c3.top/file/x3tan69I.jpg" alt="头像2"class="avatar avatar-left" >
         </a>
 
-    <div id="timer">和YLY已经在一起的第：0 天 0 小时 0 分钟 0 秒</div>
+    <div id="timer">自2023年5月20日起，我们在一起度过了：0 天 0 小时 0 分钟 0 秒</div>
 
-    <script>
-        function updateTimer() {
-            const startDate = new Date("2023-06-18T00:00:00");
-            const now = new Date();
-            const diff = now - startDate;
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / (1000 * 60)) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
-            
-            document.getElementById("timer").innerText = `和YLY在一起的第：${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒`;
+<script>
+    function updateTimer() {
+        const startDate = new Date("2023-05-20T00:00:00");
+        const now = new Date();
+        const diff = now - startDate;
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        
+        document.getElementById("timer").innerText = `自2023年5月20日起，我们在一起度过了：${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒`;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
+
+<style>
+     
+    #timer {
+        position: relative;
+        padding: 20px 30px;
+        background: linear-gradient(135deg, rgba(0, 204, 255, 0.3), rgba(255, 0, 255, 0.3));
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin-top: 20px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0.9;
+    }
+
+     
+    #timer:hover {
+        transform: scale(1.05);
+        opacity: 1;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+     
+    #timer::before {
+        content: "⏳ ";
+        font-size: 30px;
+        animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
         }
-        setInterval(updateTimer, 1000);
-        updateTimer();
-    </script>
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
 </body>
 
 
@@ -170,45 +218,90 @@
     .bubble-link {
         display: inline-flex;
         align-items: center;
-        padding: 10px 15px;
-        background-color: #ffe5b6;  
-        border-radius: 20px;  
-        border: 1px solid #ccccccb0;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 12px 24px;  
+        background: linear-gradient(145deg, #ffe5b6, #fbff96);  
+        border-radius: 25px;  
+        border: 1px solid #e5d1a2;  
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.2);  
         font-size: 16px;
         color: #333;
         text-decoration: none;
         position: relative;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;  
+        width: 220px;  
+        justify-content: center;  
+        height: 55px;  
+        text-align: center;  
+        margin-bottom: 10px;  
     }
-    
 
-    
      
     .bubble-link:hover {
-        background-color: #fbff96;
-        transform: scale(1.05);
+        background: linear-gradient(145deg, #fbff96, #ffe5b6);  
+        transform: scale(1.05);  
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.3);  
     }
-    
+
      
     .bubble-link img {
-        width: 30px;
-        height: 30px;
-        margin-right: 8px;
+        width: 35px;  
+        height: 35px;
+        margin-right: 12px;  
     }
-    </style>
+
+     
+    .more-links {
+        display: none;
+    }
+
+     
+    .show-more-button {
+        display: block;
+        width: 220px;
+        padding: 12px 0;  
+        background: #fbff96;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
+        margin-top: 15px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        transition: all 0.3s ease-in-out;
+        margin-left: auto;
+        margin-right: auto;  
+    }
+
+    .show-more-button:hover {
+        background: #ffe5b6;
+        transform: scale(1.05);
+    }
+</style>
+
+
+<a href="https://kk2c3.top/" class="bubble-link">
+    <img src="https://photo.kk2c3.top/file/i5LdczpX.gif" alt="Icon" />
+    博客主页
+</a>
+
+<a href="https://www.kk2c3.top/immersive-learning-videos/" class="bubble-link">
+    <img src="https://photo.kk2c3.top/file/pTowYB1w.gif" alt="Icon" />
+    我的大学生活
+</a>
+
+<a href="https://love.kk2c3.top" class="bubble-link">
+    <img src="https://photo.kk2c3.top/file/up4e2Lwm.gif" alt="Icon" />
+    情侣界面
+</a>
+
+
+<div class="more-links" id="more-links">
     
-    
-    <a href="http://kk2c3.top/immersive-learning-videos/" class="bubble-link">
-        <img src="https://photo.kk2c3.top/file/pTowYB1w.gif" alt="Icon" />
-        我的大学生活
-    </a>
-    
-    <a href="http://kk2c3.top/search/" class="bubble-link">
+    <a href="https://www.kk2c3.top/search/" class="bubble-link">
         <img src="https://photo.kk2c3.top/file/ICRyWlhc.gif" alt="Icon" />
         超级搜索
     </a>
-
     <a href="https://www.kk2c3.top/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/" class="bubble-link">
         <img src="https://photo.kk2c3.top/file/WKHx9shV.gif" alt="Icon" />
         实用工具链接
@@ -218,6 +311,26 @@
         <img src="https://photo.kk2c3.top/file/xEODCwLy.gif" alt="Icon" />
         归档
     </a>
+
+</div>
+
+
+<button class="show-more-button" onclick="toggleLinks()">展开更多</button>
+
+<script>
+    function toggleLinks() {
+        const moreLinks = document.getElementById("more-links");
+        const button = document.querySelector(".show-more-button");
+
+        if (moreLinks.style.display === "none" || moreLinks.style.display === "") {
+            moreLinks.style.display = "block";
+            button.innerText = "收起";
+        } else {
+            moreLinks.style.display = "none";
+            button.innerText = "展开更多";
+        }
+    }
+</script>
 
 
 
