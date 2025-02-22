@@ -1599,20 +1599,12 @@ document.getElementById('copy-link-button').addEventListener('click', function(e
     
     
     if (width <= 768) {
-      let currentWallpaperIndex = 0;
       
-      document.body.style.backgroundImage = `url('${wallpapers[currentWallpaperIndex]}')`;
+      document.body.style.backgroundImage = "url('https://photo.kk2c3.top/file/OYgqztj9.gif')";
       document.body.style.backgroundSize = "540px 960px";  
       document.body.style.backgroundPosition = "center center";
       document.body.style.backgroundRepeat = "repeat";
       document.body.style.backgroundAttachment = "scroll";  
-
-      
-      setInterval(() => {
-        currentWallpaperIndex = (currentWallpaperIndex + 1) % wallpapers.length;  
-        document.body.style.backgroundImage = `url('${wallpapers[currentWallpaperIndex]}')`;
-      }, 5000);
-
     } else {
       
       let currentWallpaperIndex = 0;
