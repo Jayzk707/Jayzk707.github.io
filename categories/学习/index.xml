@@ -103,10 +103,20 @@ class=&#34;gallery-image&#34;&gt;&lt;/p&gt;
 希望这篇文章能激励你也踏上自我提升的道路，做最好的自己，走向更光明的未来！🚀&lt;/p&gt;
 &lt;h2 id=&#34;每次学习累了看到校园的风景心情会舒适很多&#34;&gt;每次学习累了看到校园的风景心情会舒适很多🥰
 &lt;/h2&gt;&lt;p&gt;你的未来由你自己书写，考试只是其中的一章。继续努力，精彩人生在等你！&lt;/p&gt;
-&lt;video controls width=&#34;640&#34; height=&#34;360&#34;&gt;
-  &lt;source src=&#34;https://photo.kk2c3.top/file/1IHVvDgh.mp4&#34; type=&#34;video/mp4&#34;&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;video
+    controls
+    src=&#34;https://photo.kk2c3.top/file/1IHVvDgh.mp4&#34;
+    poster=&#34;https://photo.kk2c3.top/file/1IHVvDgh.mp4&#34;
+    
+    &gt;
+        &lt;p&gt;
+            Your browser doesn&#39;t support HTML5 video. Here is a
+            &lt;a href=&#34;https://photo.kk2c3.top/file/1IHVvDgh.mp4&#34;&gt;link to the video&lt;/a&gt; instead.
+        &lt;/p&gt;
+    &lt;/video&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;我的学习计划&#34;&gt;我的学习计划
 &lt;/h2&gt;&lt;h3 id=&#34;1-目标&#34;&gt;1. &lt;strong&gt;目标&lt;/strong&gt;
 &lt;/h3&gt;&lt;blockquote&gt;
