@@ -7,7 +7,7 @@
 
 <link rel='canonical' href='https://Jayzk707.github.io/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9b538730d6673062dfa12d36850e7521bdd5ecfa3941dffad81c5a493550cfc.css"><meta property='og:title' content="KK2C3">
+<link rel="stylesheet" href="/scss/style.min.77c4375cdd989b3981b43d1ce7e0e07bbc82e8827c8166d3a06882610d410bc0.css"><meta property='og:title' content="KK2C3">
 <meta property='og:description' content="欢迎来到kk2C3的博客,这个博客我会一直维护下去免费提供给大陆用户使用，我会不定期分享一些免费的黑科技，我也会制作一些黑科技分享给大家使用">
 <meta property='og:url' content='https://Jayzk707.github.io/'>
 <meta property='og:site_name' content='KK2C3'>
@@ -23,7 +23,14 @@
         <script src="/js/loading.js"></script>
 
 
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/antd/dist/antd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web/build/player/lottie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@petercatai/assistant@1.0.7/dist/umd/assistant.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@petercatai/assistant@1.0.7/dist/umd/assistant.min.css">    
 
 
 
@@ -337,7 +344,15 @@
     }
 </script>
 
-
+   
+   <script>
+    PetercatLUI.initAssistant({
+      apiDomain: 'https://api.petercat.ai',
+      token: '3b70badd-9dd7-4a01-a48a-666e28f98d95',
+      starters: ['我该怎样快速上手', '如何配置留言'],
+      clearMessage: true
+    });
+ </script>
 
         <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
@@ -1361,7 +1376,7 @@
   style="width: 100%; height: 100%; min-height: 700px"
   frameborder="0"
   allow="microphone">
-</iframe><footer class="site-footer">
+</iframe><footer class="site-footer" id="footer">
     <section class="copyright">
         &copy; 
         
@@ -1376,60 +1391,19 @@
 
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0"><span style="color: #ffffffb8; font-weight: bold;">Stack</span></a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener"><span style="color: #ffffffa8; font-weight: bold;">Jimmy</span></a>
     </section>
+    <script src="scripts/app.js"></script>
+    <div style="text-align: center;">
+        <a href="https://www.kk2c3.top" target="_blank"><img src="https://img.shields.io/badge/kk2c3-博客-blue"></a>&emsp;
+        <a href="https://kk2c3.top" target="_blank"><img src="https://img.shields.io/badge/kk2c3-主页-blue"></a>&emsp;
+        <a href="https://t.me/quanshoulu" target="_blank"><img src="https://img.shields.io/badge/TG-%E9%A2%91%E9%81%93-blue"></a>&emsp;
+        <a href="mailto:jayzk707@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-邮箱-blue"></a>&emsp;
+        <a href="https://kk2c3.top/qun/index.html" target="_blank"><img src="https://img.shields.io/badge/推送-社群-blue"></a>&emsp;
+        <a href="https://kk2c3.top/fw/index.html" target="_blank"><img src="https://img.shields.io/badge/公共-服务-blue"></a>&emsp;
+        <a href="https://kk2c3.top/e/zhichi/" target="_blank"><img src="https://img.shields.io/badge/赞助-支持-blue"></a>&emsp;
+      </div>
+</div>
 </footer>
 
-
-<div class="share-buttons">
-        
-    <a href="#" id="copy-link-button">
-        <img src="https://photo.kk2c3.top/file/UsNrdoy5.gif" alt="复制链接分享链接" width="30" />
-        复制链接分享给朋友
-    </a>
-    
-    <a href="https://photo.kk2c3.top" target="_blank">
-        <img src="https://photo.kk2c3.top/file/i5LdczpX.gif" alt="Facebook Share" width="30" />
-        kk2c3图床地址
-    </a>
-
-
-    
-    <a href="#" id="share-qq" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=16340&format=png&color=000000" alt="分享给QQ好友" width="30" />
-        分享给QQ好友
-    </a>
-
-    
-    <a href="#" id="share-qqzone" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=ZihXBimZeubs&format=png&color=000000" alt="分享到QQ空间" width="30" />
-        分享到QQ空间
-    </a>
-
-
-
-    
-    <a href="#" id="share-weibo" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=20910&format=png&color=000000" alt="分享到新浪微博" width="30" />
-        分享到新浪微博
-    </a>
-
-    
-    <a href="#" id="share-weixin" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=ShP6gieSywkK&format=png&color=000000" alt="分享到微信" width="30" />
-        分享到微信
-    </a>
-    
-    <a href="https://twitter.com/share?url=https%3a%2f%2fJayzk707.github.io%2f&text=" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter Share" width="30" />
-        分享到 Twitter
-    </a>
-    
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fJayzk707.github.io%2f" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Share" width="30" />
-        分享到 Facebook
-    </a>
-
-
-</div>
 
 
 
